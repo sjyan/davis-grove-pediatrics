@@ -10,6 +10,9 @@ const Home = props => {
   const site = props.data.site.siteMetadata;
   const services = props.data.services.edges;
   const features = props.data.features.edges;
+  const providers = props.data.providers.edges;
+  console.log('providers', providers);
+  console.log('features', features);
   const introImageClasses = `intro-image ${intro.frontmatter.intro_image_absolute && 'intro-image-absolute'} ${intro.frontmatter.intro_image_hide_on_mobile && 'intro-image-hide-mobile'}`;
 
   return (
@@ -64,8 +67,28 @@ const Home = props => {
         </div>
       )}
 
-      {features.length > 0 && (
+      {providers.length > 0 && (
         <div className="strip strip-grey">
+          <div className="container pt-6 pb-6 pt-md-10 pb-md-10">
+            <div className="row justify-content-center">
+              {providers.map(({ node }) => (
+                <div key={node.id} className="col-12 col-md-6 col-lg-4 mb-2">
+                  <div className="provider">
+                    {node.image && (
+                      <a className="provider-image" href={node.url} target="_blank">
+                        <img src={node.image} alt={node.url} />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {features.length > 0 && (
+        <div className="strip">
           <div className="container pt-6 pb-6 pt-md-10 pb-md-10">
             <div className="row justify-content-center">
               {features.map(({ node }) => (
@@ -121,6 +144,16 @@ export const query = graphql`
           intro_image_hide_on_mobile
           title
         }
+    }
+    providers: allProvidersJson {
+      edges {
+        node {
+          id
+          name
+          image
+          url
+        }
+      }
     }
     features: allFeaturesJson {
       edges {

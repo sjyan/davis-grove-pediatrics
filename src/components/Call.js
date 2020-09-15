@@ -6,7 +6,9 @@ const Call = props => {
     query ContactQuery {
         contactJson {
           phone
+          fax
           email
+          address
           contact_button_link
         }
     }
@@ -22,14 +24,30 @@ const Call = props => {
             {' '}
           </div>
         )}
-        {data.contactJson.email && (
+        {data.contactJson.fax && (
+          <div className="call-fax">
+            <strong>Fax: </strong>
+            {' '}
+            { data.contactJson.fax }
+            {' '}
+          </div>
+        )}
+        {data.contactJson.address && (
+          <div className="call-address">
+            <strong>Address: </strong>
+            {' '}
+            { data.contactJson.address }
+            {' '}
+          </div>
+        )}
+        {/* data.contactJson.email && (
           <div className="call-email">
             <strong>Email: </strong>
             <a href={`mailto:${data.contactJson.email}`}>
               {data.contactJson.email}
             </a>
           </div>
-        )}
+        ) */}
       </div>
       {props.showButton && (
         <div className="call-box-bottom">

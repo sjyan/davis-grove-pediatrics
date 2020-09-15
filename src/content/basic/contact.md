@@ -5,13 +5,14 @@ date: 2018-02-22T17:01:34+07:00
 template: "contact"
 ---
 
-Lorem markdownum aequalis strigis. Saetigeri iubeas, vultu huic alvum nondum de obside ut laniavit arbor palmis, cum quin. Rupes vetat videndo, armigerae crimen habet Priamum nec.
+Please call for appointments.
 
-| Day       | Opening Hours   |
+| Day       | Operating Hours |
 | --------- | --------------- |
-| Tuesday   | 8:30am - 5:00pm |
-| Wednesday | 8:30am - 5:00pm |
-| Thursday  | 8:30am - 5:00pm |
-| Friday    | 8:30am - 5:00pm |
-| Saturday  | 10:am - 4:00pm  |
-| Saturday  | Closed          |
+| Monday    | 9:00am - 5:30pm |
+| Tuesday   | 9:00am - 5:30pm |
+| Wednesday | 9:00am - 5:30pm |
+| Thursday  | 9:00am - 5:30pm |
+| Friday    | 9:00am - 5:30pm |
+| Saturday  | 9:00am - 1:00pm |
+| Sunday    | Closed          |

@@ -13,5 +13,15 @@
     "title": "Tax Compliance",
     "description": "We stay up to date on the latest changes to the tax code.",
     "image": "/images/features/noun_3d modeling_1885342.svg"
+  },
+  {
+    "title": "USCIS Civil Surgeon",
+    "description": "Lorem Ipsum Dolor",
+    "image": "/images/features/uscis-no-words.svg"
+  },
+  {
+    "title": "Fellows of the AAP",
+    "description": "Lorem Ipsum Dolor",
+    "image": "/images/features/aap.svg"
   }
 ]

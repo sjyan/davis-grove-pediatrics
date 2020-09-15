@@ -1,5 +1,5 @@
 // Colors
-$primary: #8036ca;
+$primary: #ca7;
 $secondary: #ffe55f;
 $black: #2f2f41;
 $white: #ffffff;
@@ -49,6 +49,7 @@ $sub-footer-text-color: $white;
 @import 'components/intro';
 @import 'components/intro-image';
 @import 'components/strip';
+@import 'components/provider';
 @import 'components/feature';
 @import 'components/social';
 
