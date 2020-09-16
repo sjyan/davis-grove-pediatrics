@@ -5,6 +5,6 @@ intro_image_absolute: true
 intro_image_hide_on_mobile: true
 ---
 
-# Davis Grove Pediatrics, PLLC.
+# Your Neighborhood Pediatric Clinic
 
 Where little things matter

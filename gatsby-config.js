@@ -2,7 +2,7 @@ const guid = process.env.NETLIFY_GOOGLE_ANALYTICS_ID;
 
 module.exports = {
   siteMetadata: {
-    title: 'Davis Grove Pediatrics',
+    title: 'Davis Grove Pediatrics, PLLC.',
     description: 'where little things matter'
   },
   plugins: [
