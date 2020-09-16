@@ -8,7 +8,10 @@ const Call = props => {
           phone
           fax
           email
-          address
+          address {
+            display
+            url
+          }
           contact_button_link
         }
     }
@@ -35,9 +38,11 @@ const Call = props => {
         {data.contactJson.address && (
           <div className="call-address">
             <strong>Address: </strong>
-            {' '}
-            { data.contactJson.address }
-            {' '}
+            <a href={data.contactJson.address.url} target="_blank">
+              {' '}
+              { data.contactJson.address.display }
+              {' '}
+            </a>
           </div>
         )}
         {/* data.contactJson.email && (
