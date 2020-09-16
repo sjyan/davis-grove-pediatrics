@@ -12,7 +12,7 @@ const Services = props => {
     <Layout bodyClass="page-services">
       <SEO title="Services" />
 
-      <div className="intro">
+      <div className="intro strip strip-grey">
         <div className="container">
           <div className="row justify-content-start">
             <div className="col-12 col-md-7 col-lg-6 order-2 order-md-1">
@@ -27,7 +27,7 @@ const Services = props => {
         </div>
       </div>
 
-      <div className="container pb-6">
+      <div className="container pb-6 pt-6">
         <div className="row">
           {services.map(edge => (
             <div key={edge.node.id} className="col-12 col-md-4 mb-1">

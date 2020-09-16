@@ -41,10 +41,10 @@ const Home = props => {
 
       {services.length > 0 && (
         <div className="strip">
-          <div className="container pt-6 pb-6 pb-md-10">
-            <div className="row justify-content-start">
+          <div className="container pt-6 pb-6 pt-md-8 pb-md-8">
+            <div className="row justify-content-center">
               {services.map(({ node }) => (
-                <div key={node.id} className="col-12 col-md-4 mb-1">
+                <div key={node.id} className="col-12 col-md-4 mb-4">
                   <div className="service service-summary">
                     <div className="service-content">
                       <h2 className="service-title">
@@ -56,7 +56,12 @@ const Home = props => {
                 </div>
               ))}
             </div>
-            <div className="row justify-content-center">
+            <div className="row justify-content-center services-button">
+              <div className="col-auto">
+                <Link className="button button-primary" to="/services/">View All Services</Link>
+              </div>
+            </div>
+            <div className="row justify-content-start services-button-mobile">
               <div className="col-auto">
                 <Link className="button button-primary" to="/services/">View All Services</Link>
               </div>
@@ -67,7 +72,7 @@ const Home = props => {
 
       {providers.length > 0 && (
         <div className="strip strip-grey">
-          <div className="container pt-6 pb-6 pt-md-10 pb-md-10">
+          <div className="container pt-6 pb-6 pt-md-6 pb-md-6">
             <div className="row justify-content-center">
               {providers.map(({ node }) => (
                 <div key={node.id} className="col-12 col-md-6 col-lg-4 mb-2">
@@ -87,7 +92,7 @@ const Home = props => {
 
       {features.length > 0 && (
         <div className="strip">
-          <div className="container pt-6 pb-6 pt-md-10 pb-md-10">
+          <div className="container pt-6 pb-6 pt-md-6 pb-md-6">
             <div className="row justify-content-center">
               {features.map(({ node }) => (
                 <div key={node.id} className="col-12 col-md-6 col-lg-4 mb-2">
