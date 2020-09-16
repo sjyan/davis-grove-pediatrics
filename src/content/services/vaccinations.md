@@ -19,10 +19,10 @@ We hope the following resources will help you in your quest for information pert
 
 ## Books
 
-* Autism's False Prophets: Bad Science, Risky Medicine and the Search for a Cure by Dr. Paul Offit
-* The Saturday Shot by Morgan Thomas
-* Do Vaccines Cause That?! A Guide for Evaluating Vaccine Safety Concerns by Martin G. Myers, MD. and Diego Pineda
-* The Pink Book, a comprehensive vaccine guide by the CDC
+* [Autism's False Prophets: Bad Science, Risky Medicine and the Search for a Cure](https://www.goodreads.com/book/show/3360358-autism-s-false-prophets) by [Dr. Paul Offit](https://www.goodreads.com/author/show/334841.Paul_A_Offit)
+* [The Saturday Shot](https://www.goodreads.com/book/show/7183259-the-saturday-shot?ac=1&from_search=true&qid=owzFkpokKS&rank=1) by [Morgan Thomas](https://www.goodreads.com/author/show/529625.Morgan_Thomas)
+* [Do Vaccines Cause That?!: A Guide for Evaluating Vaccine Safety Concerns](https://www.goodreads.com/book/show/3578469-do-vaccines-cause-that?ac=1&from_search=true&qid=BKX8suWjGo&rank=1) by [Martin G. Myers, MD.](https://www.goodreads.com/author/show/5613468.Martin_G_Myers) and [Diego Pineda](https://www.goodreads.com/author/show/5613469.Diego_Pineda)
+* [The Pink Book, a comprehensive vaccine guide](https://www.goodreads.com/book/show/6760251-epidemiology-and-prevention-of-vaccine-preventable-diseases?ac=1&from_search=true&qid=4mDvdwtp1U&rank=1) by [the CDC](https://www.goodreads.com/author/show/19069331.Centers_for_Disease_Control_and_Prevention)
 
 ## Websites
 
