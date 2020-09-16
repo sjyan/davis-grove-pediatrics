@@ -2,32 +2,32 @@
     {
       "name": "Aetna",
       "image": "/images/providers/aetna.svg",
-      "url" : "http://google.com"
+      "url" : "https://www.aetna.com/"
     },
     {
       "name": "Blue Cross Blue Shield",
       "image": "/images/providers/bcbs-color.svg",
-      "url" : "http://google.com"
+      "url" : "https://www.bcbs.com/"
     },
     {
       "name": "United",
       "image": "/images/providers/unitedhealthcare-vector-logo.svg",
-      "url": "http://google.com"
+      "url": "https://www.uhc.com/"
     },
     {
       "name": "Cigna",
       "image": "/images/providers/cigna-logo-vector.svg",
-      "url": "http://google.com"
+      "url": "https://www.cigna.com/"
     },
     {
       "name": "Humana",
       "image": "/images/providers/humana.svg",
-      "url": "http://google.com"
+      "url": "https://www.humana.com/"
     },
     {
       "name": "Tricare",
       "image": "/images/providers/tricare.svg",
-      "url": "http://google.com"
+      "url": "https://www.tricare.mil/"
     }
 ]
   

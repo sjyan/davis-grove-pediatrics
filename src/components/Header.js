@@ -22,17 +22,20 @@ class Header extends React.Component {
 
   render() {
     const config = this.props.data.configJson;
+    console.log('header config', config);
     return (
       <div className="header">
         <div className="container">
           <div className="logo">
-            <Link to="/">
-              <img height={config.logo.desktop_height} alt={config.logo.alt} src={config.logo.desktop} />
+            <Link className="masthead" to="/">
+              <h3 class="header-title">{config.logo.desktopMasthead}</h3>
+              { /* <img height={config.logo.desktop_height} alt={config.logo.alt} src={config.logo.desktop} /> */ }
             </Link>
           </div>
           <div className="logo-mobile">
-            <Link to="/">
-              <img height={config.logo.desktop_height} alt={config.logo.alt} src={config.logo.mobile} />
+            <Link className="masthead" to="/">
+              <h3 class="header-title">{config.logo.mobileMasthead}</h3>
+              { /* <img height={config.logo.desktop_height} alt={config.logo.alt} src={config.logo.mobile} /> */ }
             </Link>
           </div>
           <MenuMobile active={this.state.menuActive} />
@@ -54,6 +57,8 @@ export default props => (
             desktop
             mobile
             desktop_height
+            desktopMasthead
+            mobileMasthead
           }
         }
       }

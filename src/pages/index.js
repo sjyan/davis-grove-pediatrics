@@ -11,8 +11,6 @@ const Home = props => {
   const services = props.data.services.edges;
   const features = props.data.features.edges;
   const providers = props.data.providers.edges;
-  console.log('providers', providers);
-  console.log('features', features);
   const introImageClasses = `intro-image ${intro.frontmatter.intro_image_absolute && 'intro-image-absolute'} ${intro.frontmatter.intro_image_hide_on_mobile && 'intro-image-hide-mobile'}`;
 
   return (
