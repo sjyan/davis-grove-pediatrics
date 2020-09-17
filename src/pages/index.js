@@ -1,17 +1,21 @@
-import React from 'react';
-import { graphql, Link } from 'gatsby';
-import Helmet from 'react-helmet';
-import SEO from '../components/SEO';
-import Layout from '../components/Layout';
-import Call from '../components/Call';
+import React from "react";
+import { graphql, Link } from "gatsby";
+import Helmet from "react-helmet";
+import SEO from "../components/SEO";
+import Layout from "../components/Layout";
+import Call from "../components/Call";
 
-const Home = props => {
+const Home = (props) => {
   const intro = props.data.intro;
   const site = props.data.site.siteMetadata;
   const services = props.data.services.edges;
   const features = props.data.features.edges;
   const providers = props.data.providers.edges;
-  const introImageClasses = `intro-image ${intro.frontmatter.intro_image_absolute && 'intro-image-absolute'} ${intro.frontmatter.intro_image_hide_on_mobile && 'intro-image-hide-mobile'}`;
+  const introImageClasses = `intro-image ${
+    intro.frontmatter.intro_image_absolute && "intro-image-absolute"
+  } ${
+    intro.frontmatter.intro_image_hide_on_mobile && "intro-image-hide-mobile"
+  }`;
 
   return (
     <Layout bodyClass="page-home">
@@ -32,7 +36,14 @@ const Home = props => {
             </div>
             {intro.frontmatter.intro_image && (
               <div className="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-                <img alt={intro.frontmatter.title} className={introImageClasses} src={intro.frontmatter.intro_image} />
+                <img
+                  alt={intro.frontmatter.title}
+                  className={introImageClasses}
+                  src={intro.frontmatter.intro_image}
+                  data-sal="slide-left"
+                  data-sal-duration="1000"
+                  data-sal-easing="ease"
+                />
               </div>
             )}
           </div>
@@ -48,7 +59,9 @@ const Home = props => {
                   <div className="service service-summary">
                     <div className="service-content">
                       <h2 className="service-title">
-                        <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+                        <Link to={node.fields.slug}>
+                          {node.frontmatter.title}
+                        </Link>
                       </h2>
                       <p>{node.excerpt}</p>
                     </div>
@@ -58,12 +71,16 @@ const Home = props => {
             </div>
             <div className="row justify-content-center services-button">
               <div className="col-auto">
-                <Link className="button button-primary" to="/services/">View All Services</Link>
+                <Link className="button button-primary" to="/services/">
+                  View All Services
+                </Link>
               </div>
             </div>
             <div className="row justify-content-start services-button-mobile">
               <div className="col-auto">
-                <Link className="button button-primary" to="/services/">View All Services</Link>
+                <Link className="button button-primary" to="/services/">
+                  View All Services
+                </Link>
               </div>
             </div>
           </div>
@@ -78,8 +95,18 @@ const Home = props => {
                 <div key={node.id} className="col-12 col-md-6 col-lg-4 mb-2">
                   <div className="provider">
                     {node.image && (
-                      <a className="provider-image" href={node.url} target="_blank">
-                        <img src={node.image} alt={node.url} />
+                      <a
+                        className="provider-image"
+                        href={node.url}
+                        target="_blank"
+                      >
+                        <img
+                          src={node.image}
+                          alt={node.url}
+                          data-sal="fade"
+                          data-sal-duration="1500"
+                          data-sal-easing="ease"
+                        />
                       </a>
                     )}
                   </div>
@@ -118,7 +145,7 @@ const Home = props => {
 export const query = graphql`
   query {
     services: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/services\/.*/" } }
+      filter: { fileAbsolutePath: { regex: "/services/.*/" } }
       sort: { fields: [frontmatter___weight], order: ASC }
       limit: 6
     ) {
@@ -136,17 +163,15 @@ export const query = graphql`
         }
       }
     }
-    intro: markdownRemark(
-      fileAbsolutePath: {regex: "/content/index.md/"}
-    ) {
-        html
-        frontmatter {
-          image
-          intro_image
-          intro_image_absolute
-          intro_image_hide_on_mobile
-          title
-        }
+    intro: markdownRemark(fileAbsolutePath: { regex: "/content/index.md/" }) {
+      html
+      frontmatter {
+        image
+        intro_image
+        intro_image_absolute
+        intro_image_hide_on_mobile
+        title
+      }
     }
     providers: allProvidersJson {
       edges {

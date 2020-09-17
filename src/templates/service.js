@@ -1,7 +1,7 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import SEO from '../components/SEO';
-import Layout from '../components/Layout';
+import React from "react";
+import { graphql } from "gatsby";
+import SEO from "../components/SEO";
+import Layout from "../components/Layout";
 
 const Service = ({ data }) => {
   const { title } = data.markdownRemark.frontmatter;
@@ -13,7 +13,10 @@ const Service = ({ data }) => {
           <div className="col-12 col-md-8">
             <div className="service service-single">
               <h1 className="title">{title}</h1>
-              <div className="content" dangerouslySetInnerHTML={{ __html: html }} />
+              <div
+                className="content"
+                dangerouslySetInnerHTML={{ __html: html }}
+              />
             </div>
           </div>
         </div>

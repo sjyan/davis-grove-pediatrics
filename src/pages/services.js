@@ -1,12 +1,16 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
-import SEO from '../components/SEO';
-import Layout from '../components/Layout';
+import React from "react";
+import { Link, graphql } from "gatsby";
+import SEO from "../components/SEO";
+import Layout from "../components/Layout";
 
-const Services = props => {
+const Services = (props) => {
   const services = props.data.services.edges;
   const { intro } = props.data;
-  const introImageClasses = `intro-image ${intro.frontmatter.intro_image_absolute && 'intro-image-absolute'} ${intro.frontmatter.intro_image_hide_on_mobile && 'intro-image-hide-mobile'}`;
+  const introImageClasses = `intro-image ${
+    intro.frontmatter.intro_image_absolute && "intro-image-absolute"
+  } ${
+    intro.frontmatter.intro_image_hide_on_mobile && "intro-image-hide-mobile"
+  }`;
 
   return (
     <Layout bodyClass="page-services">
@@ -20,7 +24,14 @@ const Services = props => {
             </div>
             {intro.frontmatter.intro_image && (
               <div className="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-                <img alt={intro.frontmatter.title} className={introImageClasses} src={intro.frontmatter.intro_image} />
+                <img
+                  alt={intro.frontmatter.title}
+                  className={introImageClasses}
+                  src={intro.frontmatter.intro_image}
+                  data-sal="slide-left"
+                  data-sal-duration="1000"
+                  data-sal-easing="ease"
+                />
               </div>
             )}
           </div>
@@ -28,13 +39,15 @@ const Services = props => {
       </div>
 
       <div className="container pb-6 pt-6">
-        <div className="row">
-          {services.map(edge => (
+        <div className="row justify-content-center">
+          {services.map((edge) => (
             <div key={edge.node.id} className="col-12 col-md-4 mb-1">
               <div className="card service service-teaser">
                 <div className="card-content">
                   <h2>
-                    <Link to={edge.node.fields.slug}>{edge.node.frontmatter.title}</Link>
+                    <Link to={edge.node.fields.slug}>
+                      {edge.node.frontmatter.title}
+                    </Link>
                   </h2>
                   <p>{edge.node.excerpt}</p>
                 </div>
@@ -50,7 +63,7 @@ const Services = props => {
 export const query = graphql`
   query ServicesQuery {
     services: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/services\/.*/" } }
+      filter: { fileAbsolutePath: { regex: "/services/.*/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
@@ -66,7 +79,7 @@ export const query = graphql`
         }
       }
     }
-    intro: markdownRemark(fileAbsolutePath: {regex: "/(services.md)/"}) {
+    intro: markdownRemark(fileAbsolutePath: { regex: "/(services.md)/" }) {
       html
       frontmatter {
         title

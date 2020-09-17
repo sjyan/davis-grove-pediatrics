@@ -1,52 +1,92 @@
+/* eslint-disable linebreak-style */
 const guid = process.env.NETLIFY_GOOGLE_ANALYTICS_ID;
 
 module.exports = {
   siteMetadata: {
-    title: 'Davis Grove Pediatrics, PLLC.',
-    description: 'where little things matter'
+    title: "Davis Grove Pediatrics, PLLC.",
+    description: "where little things matter",
   },
   plugins: [
-    'gatsby-plugin-sass',
-    'gatsby-transformer-json',
-    'gatsby-transformer-remark',
-    'gatsby-plugin-react-helmet',
+    "gatsby-plugin-sass",
+    "gatsby-transformer-json",
+    "gatsby-transformer-remark",
+    "gatsby-plugin-react-helmet",
+    `gatsby-transformer-sharp`,
+    "gatsby-plugin-sharp",
+    `gatsby-plugin-scroll-reveal`,
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-plugin-scroll-reveal`,
+      options: {
+        threshold: 0.1, // Percentage of an element's area that needs to be visible to launch animation
+        once: false, // Defines if animation needs to be launched once
+        // Advanced Options
+        selector: "[data-sal]", // Selector of the elements to be animated
+        animateClassName: "sal-animate", // Class name which triggers animation
+        disabledClassName: "sal-disabled", // Class name which defines the disabled state
+        rootMargin: "0% 50%", // Corresponds to root's bounding box margin
+        enterEventName: "sal:in", // Enter event name
+        exitEventName: "sal:out", // Exit event name
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/images`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/content`,
-        name: 'content'
-      }
+        name: "content",
+      },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages'
-      }
+        name: "pages",
+      },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/data`,
-        name: 'data'
-      }
+        name: "data",
+      },
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: guid || 'UA-XXX-1',
+        trackingId: guid || "UA-XXX-1",
         // Puts tracking script in the head instead of the body
-        head: false
-      }
+        head: false,
+      },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          'Playfair+Display:400,700'
+        fonts: ["Playfair+Display:400,700"],
+        display: "swap",
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 1200,
+              markdownCaptions: true,
+              linkImagesToOriginal: true,
+            },
+          },
         ],
-        display: 'swap'
-      }
-    }
-  ]
+      },
+    },
+  ],
 };
