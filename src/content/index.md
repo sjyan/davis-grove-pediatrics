@@ -7,4 +7,4 @@ intro_image_hide_on_mobile: false
 
 # Your Neighborhood Pediatric Clinic
 
-Where little things matter
+Where little things matter.
