@@ -1,6 +1,6 @@
 ---
-path: '/contact'
-title: 'Contact'
+path: "/contact"
+title: "Contact"
 date: 2018-02-22T17:01:34+07:00
 template: "contact"
 ---
@@ -20,5 +20,5 @@ We appreciate your help and look forward to seeing you.
 | Wednesday | 9:00am - 5:30pm |
 | Thursday  | 9:00am - 5:30pm |
 | Friday    | 9:00am - 5:30pm |
-| Saturday  | 9:00am - 1:00pm |
+| Saturday  | Closed          |
 | Sunday    | Closed          |
