@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-serif-theme",
+  "name": "davis-grove-pediatrics",
   "version": "1.0.0",
-  "author": "Robert Austin <rob@zerostatic.io>",
+  "author": "Stephen Yan <sjyan@outlook.com>",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
