@@ -1,0 +1,160 @@
+p.paragraph {
+  margin: 20px 0;
+}
+
+button.reset, input.submit, input.clear {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-transition: background-color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+  /* font-family: ${p => p.theme.font.markdown}; */
+  background-color: transparent;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 2px $black;
+  color: $black;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: 600;
+  height: 3.5em;
+  letter-spacing: 0.25em;
+  line-height: 3.5em;
+  padding: 0 1.75em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+form.form {
+  margin: $field-margin 0;
+
+  .field {
+    margin: 0 0 $field-margin 0;
+
+    &.half {
+      width: 50%;
+      float: left;
+      padding: 0 0 0 ($field-margin * 0.5);
+
+      &.first {
+        padding: 0 ($field-margin * 0.5) 0 0;
+      }
+    }
+  }
+
+  > .actions {
+    margin: ($field-margin * 1.25) 0 0 0 !important;
+  }
+
+  @include media-breakpoint-down(md) {
+    .field {
+      margin: 0 0 ($field-margin * 0.75) 0;
+
+      &.half {
+        padding: 0 0 0 ($field-margin * 0.75 * 0.5);
+
+        &.first {
+          padding: 0 ($field-margin * 0.75 * 0.5) 0 0;
+        }
+      }
+    }
+
+    > .actions {
+      margin: $field-margin 0 0 0 !important;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .field {
+      &.half {
+        width: 100%;
+        float: none;
+        padding: 0;
+
+        &.first {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+label.label {
+  color: $black;
+  display: block;
+  font-size: 0.8em;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  margin: 0 0 ($field-margin * 0.5) 0;
+  text-transform: uppercase
+}
+
+input.input, textarea {
+  background: $complement;
+  border: none;
+  border-radius: 5px;
+  color: inherit;
+  display: block;
+  outline: 0;
+  padding: 0 1em;
+  text-decoration: none;
+  width: 100%;
+  resize: vertical;
+  transition: box-shadow 0.3s ease-out;
+
+  &:invalid {
+    box-shadow: none;
+  }
+
+  &:focus {
+    border-color: $black; 
+    box-shadow: 0 0 0 1px $steel; 
+    transition: box-shadow 0.2s ease-out;
+  }
+}
+
+input.input {
+  height: 45px;
+}
+
+span.field-error {
+  display: block;
+  color: $warning;
+  margin-top: 5px;
+}
+
+textarea {
+  padding: 0.75em 1em;
+  box-shadow: 0 0 0 1px transparent;
+}
+
+textarea.errors {
+  box-shadow: 0 0 0 1px red;
+}
+
+ul.actions {
+  cursor: default;
+  list-style: none;
+  padding-left: 0;
+}
+
+li.action-item {
+  display: inline-block;
+  padding: 0 1em 0 0;
+  vertical-align: middle;
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+input.submit {
+  background-color: $primary;
+  box-shadow: none;
+  color: $white;
+}

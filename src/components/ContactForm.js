@@ -1,3 +1,13 @@
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import EmailRule from '@util/EmailRule';
+import SerializeForm from '@util/SerializeForm';
+
+const elementMargin = 30;
+const inputHeight = 45;
+const required = 'This field is required.';
+const formName = 'Contact';
+
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
   const {
@@ -30,19 +40,24 @@ const ContactForm = () => {
     }
   };
 
-  const showSubmitError = (msg) => <Paragraph>{msg}</Paragraph>;
+  const showSubmitError = (msg) => <p className="paragraph">{msg}</p>;
 
   const showThankYou = (
     <div className="msg-confirm">
-      <Paragraph>I got your message. Thanks!</Paragraph>
-      <Reset type="button" onClick={() => setSubmitted(false)}>
+      <p className="paragraph">We got your message. Thanks!</p>
+      <button
+        className="reset"
+        type="button"
+        onClick={() => setSubmitted(false)}
+      >
         Send another one
-      </Reset>
+      </button>
     </div>
   );
 
   const showForm = (
-    <Form
+    <form
+      className="form"
       onSubmit={handleSubmit(onSubmit)}
       name={formName}
       method="post"
@@ -51,10 +66,20 @@ const ContactForm = () => {
       margin={elementMargin}
     >
       <div hidden>
-        <Label htmlFor="bot-field">Honeypot</Label>
-        <Input type="hidden" id="bot-field" name="bot-field" />
-        <Label htmlFor="form-name">Form name</Label>
-        <Input
+        <label className="label" htmlFor="bot-field">
+          Honeypot
+        </label>
+        <input
+          className="input"
+          type="hidden"
+          id="bot-field"
+          name="bot-field"
+        />
+        <label className="label" htmlFor="form-name">
+          Form name
+        </label>
+        <input
+          className="input"
           type="hidden"
           id="form-name"
           name="form-name"
@@ -63,76 +88,83 @@ const ContactForm = () => {
         />
       </div>
       <div className="field half first">
-        <Label htmlFor="name" margin={elementMargin}>
+        <label className="label" htmlFor="name" margin={elementMargin}>
           Name
-        </Label>
-        <Input
+        </label>
+        <input
+          className="input"
           type="text"
           name="name"
           id="name"
           height={inputHeight}
           ref={register({ required })}
           disabled={isSubmitting}
-          error={errors.name ? true : false}
+          error={errors.name}
         />
-        {errors.name && <FieldError>{errors.name.message}</FieldError>}
+        {errors.name && (
+          <span className="field-error">{errors.name.message}</span>
+        )}
       </div>
       <div className="field half">
-        <Label htmlFor="email" margin={elementMargin}>
+        <label className="label" htmlFor="email" margin={elementMargin}>
           Email
-        </Label>
-        <Input
+        </label>
+        <input
+          className="input"
           type="text"
           name="email"
           id="email"
           height={inputHeight}
           ref={register({
-            required: required,
+            required,
             pattern: { value: EmailRule.regex, message: EmailRule.message },
           })}
           disabled={isSubmitting}
-          error={errors.email ? true : false}
+          error={errors.email}
         />
-        {errors.email && <FieldError>{errors.email.message}</FieldError>}
+        {errors.email && (
+          <span className="field-error">{errors.email.message}</span>
+        )}
       </div>
       <div className="field">
-        <Label htmlFor="message" margin={elementMargin}>
+        <label className="label" htmlFor="message" margin={elementMargin}>
           Message
-        </Label>
-        <Textarea
+        </label>
+        <textarea
+          className={errors.message && 'errors'}
           name="message"
           id="message"
           rows="6"
           ref={register({ required })}
           disabled={isSubmitting}
-          error={errors.message ? true : false}
-        ></Textarea>
-        {errors.message && <FieldError>{errors.message.message}</FieldError>}
+          error={errors.message}
+        ></textarea>
+        {errors.message && (
+          <span className="field-error">{errors.message.message}</span>
+        )}
       </div>
-      <Actions className="actions">
-        <ActionItem>
-          <Submit
+      <ul className="actions">
+        <li className="action-item">
+          <input
             type="submit"
             value="Send Message"
-            className="special"
+            className="special submit"
             disabled={isSubmitting}
           />
-        </ActionItem>
-        <ActionItem>
-          <Clear type="reset" value="Clear" onClick={reset} />
-        </ActionItem>
-      </Actions>
-    </Form>
+        </li>
+        <li className="action-item">
+          <input className="clear" type="reset" value="Clear" onClick={reset} />
+        </li>
+      </ul>
+    </form>
   );
 
   return (
-    <Section id="contact">
-      <Container>
-        <h1>Get in touch.</h1>
-        {errors && errors.submit && showSubmitError(errors.submit.message)}
-        <div>{submitted ? showThankYou : showForm}</div>
-      </Container>
-    </Section>
+    <>
+      <h1>Get in touch.</h1>
+      {errors && errors.submit && showSubmitError(errors.submit.message)}
+      <div>{submitted ? showThankYou : showForm}</div>
+    </>
   );
 };
 

@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
 import Call from '../components/Call';
+import ContactForm from '@components/ContactForm';
 
 const Contact = ({ data }) => {
   const { title } = data.markdownRemark.frontmatter;
@@ -23,7 +24,7 @@ const Contact = ({ data }) => {
       </div>
       <div className="strip-grey">
         <div className="container pb-6 pt-6 pt-md-10 pb-md-10">
-          Hello there. Contact component here.
+          <ContactForm />
         </div>
       </div>
     </Layout>

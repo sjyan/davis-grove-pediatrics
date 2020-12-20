@@ -1,3 +1,5 @@
+const path = require('path');
+
 /* eslint-disable linebreak-style */
 const guid = process.env.NETLIFY_GOOGLE_ANALYTICS_ID;
 
@@ -17,6 +19,15 @@ module.exports = {
     `gatsby-transformer-sharp`,
     'gatsby-plugin-sharp',
     `gatsby-plugin-scroll-reveal`,
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@components': path.resolve(__dirname, 'src/components'),
+          '@util': path.resolve(__dirname, 'src/util'),
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {

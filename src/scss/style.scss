@@ -5,6 +5,8 @@ $black: #2f2f41;
 $white: #ffffff;
 $white-offset: #f6f7ff;
 $steel: #5C5A5A;
+$complement: #fffef6;
+$warning: #d73a49;
 
 // Links
 $link-color: $primary;
@@ -21,6 +23,9 @@ $footer-background-color: $primary;
 $footer-text-color: $white;
 $sub-footer-background-color: darken($primary, 10%);
 $sub-footer-text-color: $white;
+
+// Field controls
+$field-margin: 30px;
 
 // Bootstrap
 @import 'bootstrap-variables';
@@ -53,6 +58,7 @@ $sub-footer-text-color: $white;
 @import 'components/feature';
 @import 'components/social';
 @import 'components/service';
+@import 'components/contact-form';
 
 // Pages
 @import 'pages/home';
