@@ -18,7 +18,6 @@ const Call = (props) => {
   `);
 
   if (props.showInfo) {
-    console.log('showing info', props);
     return (
       <div className="call">
         <div className="call-box-top">
