@@ -58,7 +58,8 @@ const Call = (props) => {
         </div>
       </div>
     );
-  } if (props.showButton) {
+  }
+  if (props.showButton) {
     return (
       props.showButton && (
         <div className="call-box-bottom">
