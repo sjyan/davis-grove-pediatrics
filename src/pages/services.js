@@ -1,15 +1,15 @@
-import React from "react";
-import { Link, graphql } from "gatsby";
-import SEO from "../components/SEO";
-import Layout from "../components/Layout";
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import SEO from '../components/SEO';
+import Layout from '../components/Layout';
 
 const Services = (props) => {
   const services = props.data.services.edges;
   const { intro } = props.data;
   const introImageClasses = `intro-image ${
-    intro.frontmatter.intro_image_absolute && "intro-image-absolute"
+    intro.frontmatter.intro_image_absolute && 'intro-image-absolute'
   } ${
-    intro.frontmatter.intro_image_hide_on_mobile && "intro-image-hide-mobile"
+    intro.frontmatter.intro_image_hide_on_mobile && 'intro-image-hide-mobile'
   }`;
 
   return (

@@ -1,27 +1,27 @@
 [
-    {
-        "name": "Services",
-        "url": "/services/",
-        "weight": 2
-    },
-    {
-        "name": "Team",
-        "url": "/team/",
-        "weight": 3
-    },
-    {
-        "name": "Policies",
-        "url": "/policies/",
-        "weight": 4
-    },
-    {
-        "name": "About",
-        "url": "/about/",
-        "weight": 5
-    },
-    {
-        "name": "Contact",
-        "url": "/contact/",
-        "weight": 6
-    }
+  {
+    "name": "Services",
+    "url": "/services/",
+    "weight": 2
+  },
+  {
+    "name": "Team",
+    "url": "/team/",
+    "weight": 3
+  },
+  {
+    "name": "Policies",
+    "url": "/policies/",
+    "weight": 4
+  },
+  {
+    "name": "About",
+    "url": "/about/",
+    "weight": 5
+  },
+  {
+    "name": "Contact",
+    "url": "/contact/",
+    "weight": 6
+  }
 ]

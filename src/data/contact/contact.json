@@ -1,10 +1,10 @@
 {
-    "email": "hugoserif@example.com",
-    "phone": "(919) 363-3427",
-    "fax": "(919) 363-3437",
-    "address": {
-        "display": "204 Davis Grove Circle, Suite 107, Cary, NC 27519",
-        "url": "https://goo.gl/maps/ggfuSzsBLPwUdYzP9"
-    },
-    "contact_button_link": "contact"
+  "email": "hugoserif@example.com",
+  "phone": "(919) 363-3427",
+  "fax": "(919) 363-3437",
+  "address": {
+    "display": "204 Davis Grove Circle, Suite 107, Cary, NC 27519",
+    "url": "https://goo.gl/maps/ggfuSzsBLPwUdYzP9"
+  },
+  "contact_button_link": "contact"
 }

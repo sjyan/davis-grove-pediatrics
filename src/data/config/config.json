@@ -1,24 +1,24 @@
 {
-    "homepage": {
-        "show_call_box": true
-    },
-    "logo": {
-        "mobile": "/images/logo/baby.svg",
-        "desktop": "/images/logo/logo.svg",
-        "desktop_height": "36px",
-        "alt": "DavisGrovePeds",
-        "desktopMasthead": "Davis Grove Pediatrics, PLLC.",
-        "mobileMasthead": "DavisGrovePediatrics"
-    },
-    "homepage_meta_tags": {
-        "meta_description": "Your neighborhood pediatric clinic",
-        "meta_og_title": "Davis Grove Pediatrics",
-        "meta_og_type": "website",
-        "meta_og_url": "https://davis-grove-pediatrics.netlify.app",
-        "meta_og_description": "Your neighborhood pediatric clinic"
-    },
-    "footer": {
-        "copyright_text": "Free Gatsby theme by",
-        "copyright_link": "https://www.zerostatic.io"
-    }
+  "homepage": {
+    "show_call_box": true
+  },
+  "logo": {
+    "mobile": "/images/logo/baby.svg",
+    "desktop": "/images/logo/logo.svg",
+    "desktop_height": "36px",
+    "alt": "DavisGrovePeds",
+    "desktopMasthead": "Davis Grove Pediatrics, PLLC.",
+    "mobileMasthead": "DavisGrovePediatrics"
+  },
+  "homepage_meta_tags": {
+    "meta_description": "Your neighborhood pediatric clinic",
+    "meta_og_title": "Davis Grove Pediatrics",
+    "meta_og_type": "website",
+    "meta_og_url": "https://davis-grove-pediatrics.netlify.app",
+    "meta_og_description": "Your neighborhood pediatric clinic"
+  },
+  "footer": {
+    "copyright_text": "Free Gatsby theme by",
+    "copyright_link": "https://www.zerostatic.io"
+  }
 }

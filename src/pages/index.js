@@ -1,9 +1,9 @@
-import React from "react";
-import { graphql, Link } from "gatsby";
-import Helmet from "react-helmet";
-import SEO from "../components/SEO";
-import Layout from "../components/Layout";
-import Call from "../components/Call";
+import React from 'react';
+import { graphql, Link } from 'gatsby';
+import Helmet from 'react-helmet';
+import SEO from '../components/SEO';
+import Layout from '../components/Layout';
+import Call from '../components/Call';
 
 const Home = (props) => {
   const intro = props.data.intro;
@@ -12,21 +12,14 @@ const Home = (props) => {
   const features = props.data.features.edges;
   const providers = props.data.providers.edges;
   const introImageClasses = `intro-image ${
-    intro.frontmatter.intro_image_absolute && "intro-image-absolute"
+    intro.frontmatter.intro_image_absolute && 'intro-image-absolute'
   } ${
-    intro.frontmatter.intro_image_hide_on_mobile && "intro-image-hide-mobile"
+    intro.frontmatter.intro_image_hide_on_mobile && 'intro-image-hide-mobile'
   }`;
 
   return (
     <Layout bodyClass="page-home">
       <SEO title={site.title} />
-      <Helmet>
-        <meta
-          name="description"
-          content="Small Business Theme. Multiple content types using Markdown and JSON sources. Responsive design and SCSS. This is a beautiful and artfully designed starting theme."
-        />
-      </Helmet>
-
       <div className="intro strip strip-grey">
         <div className="container">
           <div className="row justify-content-start">

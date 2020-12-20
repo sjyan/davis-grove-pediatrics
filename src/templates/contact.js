@@ -14,7 +14,10 @@ const Contact = ({ data }) => {
           <div className="col-12 col-md-8">
             <h1 className="title">{title}</h1>
             <Call showButton={false} showInfo={true} />
-            <div className="content mt-4" dangerouslySetInnerHTML={{ __html: html }} />
+            <div
+              className="content mt-4"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
           </div>
         </div>
       </div>

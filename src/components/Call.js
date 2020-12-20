@@ -1,5 +1,5 @@
-import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const Call = (props) => {
   const data = useStaticQuery(graphql`
@@ -18,26 +18,26 @@ const Call = (props) => {
   `);
 
   if (props.showInfo) {
-    console.log("showing info", props);
+    console.log('showing info', props);
     return (
       <div className="call">
         <div className="call-box-top">
           {data.contactJson.phone && (
             <div className="call-phone">
-              <strong>Phone: </strong> {data.contactJson.phone}{" "}
+              <strong>Phone: </strong> {data.contactJson.phone}{' '}
             </div>
           )}
           {data.contactJson.fax && (
             <div className="call-fax">
-              <strong>Fax: </strong> {data.contactJson.fax}{" "}
+              <strong>Fax: </strong> {data.contactJson.fax}{' '}
             </div>
           )}
           {data.contactJson.address && (
             <div className="call-address">
               <strong>Address: </strong>
               <a href={data.contactJson.address.url} target="_blank">
-                {" "}
-                {data.contactJson.address.display}{" "}
+                {' '}
+                {data.contactJson.address.display}{' '}
               </a>
             </div>
           )}

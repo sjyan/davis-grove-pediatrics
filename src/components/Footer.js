@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 
-const Footer = props => {
+const Footer = (props) => {
   const data = useStaticQuery(graphql`
     query FooterQuery {
       allFooterMenuJson {

@@ -4,7 +4,9 @@ const guid = process.env.NETLIFY_GOOGLE_ANALYTICS_ID;
 module.exports = {
   siteMetadata: {
     title: "Davis Grove Pediatrics, PLLC.",
-    description: "where little things matter",
+    description: "Pediatric child care located in Cary, NC. Certified members of the American Board of Pediatrics and The American Academy of Pediatrics.",
+    url: "https://www.davisgrovepeds.com/",
+    image: "/doctor-favicon.svg"
   },
   plugins: [
     "gatsby-plugin-sass",

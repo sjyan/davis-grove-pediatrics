@@ -8,13 +8,13 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuActive: false
+      menuActive: false,
     };
   }
 
-  toggleMenu = menuActive => {
-    this.setState(prevState => ({
-      menuActive: !prevState.menuActive
+  toggleMenu = (menuActive) => {
+    this.setState((prevState) => ({
+      menuActive: !prevState.menuActive,
     }));
   };
 
@@ -26,13 +26,13 @@ class Header extends React.Component {
           <div className="logo">
             <Link className="masthead" to="/">
               <h3 className="header-title">{config.logo.desktopMasthead}</h3>
-              { /* <img height={config.logo.desktop_height} alt={config.logo.alt} src={config.logo.desktop} /> */ }
+              {/* <img height={config.logo.desktop_height} alt={config.logo.alt} src={config.logo.desktop} /> */}
             </Link>
           </div>
           <div className="logo-mobile">
             <Link className="masthead" to="/">
               <h3 className="header-title">{config.logo.mobileMasthead}</h3>
-              { /* <img height={config.logo.desktop_height} alt={config.logo.alt} src={config.logo.mobile} /> */ }
+              {/* <img height={config.logo.desktop_height} alt={config.logo.alt} src={config.logo.mobile} /> */}
             </Link>
           </div>
           <MenuMobile active={this.state.menuActive} />
@@ -44,7 +44,7 @@ class Header extends React.Component {
   }
 }
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       query HeaderQuery {
@@ -60,6 +60,6 @@ export default props => (
         }
       }
     `}
-    render={data => <Header data={data} />}
+    render={(data) => <Header data={data} />}
   />
 );

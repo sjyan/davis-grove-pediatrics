@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Social from './Social';
 
-const SubFooter = props => {
+const SubFooter = (props) => {
   const data = useStaticQuery(graphql`
     query SubFooterQuery {
       configJson {
@@ -23,7 +23,9 @@ const SubFooter = props => {
               <div className="copyright">
                 <span>{data.configJson.footer.copyright_text}</span>
                 {data.configJson.footer.copyright_link && (
-                  <a href={data.configJson.footer.copyright_link}>{data.configJson.footer.copyright_link}</a>
+                  <a href={data.configJson.footer.copyright_link}>
+                    {data.configJson.footer.copyright_link}
+                  </a>
                 )}
               </div>
             </div>
