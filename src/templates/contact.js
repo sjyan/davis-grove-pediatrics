@@ -21,6 +21,11 @@ const Contact = ({ data }) => {
           </div>
         </div>
       </div>
+      <div className="strip-grey">
+        <div className="container pb-6 pt-6 pt-md-10 pb-md-10">
+          Hello there. Contact component here.
+        </div>
+      </div>
     </Layout>
   );
 };
