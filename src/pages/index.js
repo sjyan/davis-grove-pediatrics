@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 import Call from '../components/Call';
 
 const Home = (props) => {
-  const intro = props.data.intro;
+  const {intro} = props.data;
   const site = props.data.site.siteMetadata;
   const services = props.data.services.edges;
   const features = props.data.features.edges;

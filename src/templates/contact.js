@@ -1,9 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import ContactForm from '@components/ContactForm';
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
 import Call from '../components/Call';
-import ContactForm from '@components/ContactForm';
 
 const Contact = ({ data }) => {
   const { title } = data.markdownRemark.frontmatter;

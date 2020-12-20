@@ -8,7 +8,8 @@
     "start": "npm run develop",
     "build": "gatsby build",
     "clean": "gatsby clean",
-    "format": "prettier --write \"**/*.{js,json}\""
+    "format": "prettier --write \"**/*.{js,json}\"",
+    "lint": "eslint --fix --ext .js ."
   },
   "dependencies": {
     "gatsby": "^2.24.51",

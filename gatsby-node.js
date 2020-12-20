@@ -1,4 +1,5 @@
 const path = require('path');
+
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 // Generate slug field for all markdown files
