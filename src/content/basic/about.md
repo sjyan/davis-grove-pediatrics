@@ -8,6 +8,4 @@ Welcome to Davis Grove Pediatrics. Our clinic serves the RTP area in North Carol
 
 Our goal is to ensure your children receive excellent care from infancy through young adulthood. Their medical needs, big or small, are always our top priority. We appreciate and respect the trust you place in us. When you're here, you're in good hands.
 
-We are always accepting new patients; walk-ins welcome.
-
-**Picture here.**
+We are always accepting new patients. Walk-ins welcome.
