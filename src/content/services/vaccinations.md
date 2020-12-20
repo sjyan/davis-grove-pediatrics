@@ -1,8 +1,8 @@
 ---
 title: "Vaccinations"
-date: 2018-11-18T12:33:46+10:00
+date: 2020-12-19
 featured: true
-weight: 2
+weight: 3
 ---
 
 We believe vaccines are a necessary part of public health intervention to keep our children and adults healthy. Staying informed will help you separate myth from fact and help you make informed decisions about vaccines. The following information is intended to address potential questions from parents.

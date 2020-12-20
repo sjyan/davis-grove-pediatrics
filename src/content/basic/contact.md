@@ -22,3 +22,7 @@ We appreciate your help and look forward to seeing you.
 | Friday    | 9:00am - 5:30pm |
 | Saturday  | Closed          |
 | Sunday    | Closed          |
+
+> Please note that we are closed on major holidays.
+
+> Due to COVID-19, please note that we are not accommodating any walk-ins.

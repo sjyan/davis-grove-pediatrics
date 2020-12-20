@@ -3,22 +3,25 @@
     "show_call_box": true
   },
   "logo": {
-    "mobile": "/images/logo/baby.svg",
-    "desktop": "/images/logo/logo.svg",
+    "mobile": "/doctor-favicon.svg",
+    "desktop": "/doctor-favicon.svg",
     "desktop_height": "36px",
     "alt": "DavisGrovePeds",
     "desktopMasthead": "Davis Grove Pediatrics, PLLC.",
-    "mobileMasthead": "DavisGrovePediatrics"
+    "mobileMasthead": "DavisGrovePediatrics",
+    "phone": "919-363-3427",
+    "addressLine1": "204 Davis Grove Circle, Suite 107",
+    "addressLine2": "Cary, NC 27519"
   },
   "homepage_meta_tags": {
-    "meta_description": "Your neighborhood pediatric clinic",
+    "meta_description": "Pediatric child care located in Cary, NC. Certified members of the American Board of Pediatrics and The American Academy of Pediatrics.",
     "meta_og_title": "Davis Grove Pediatrics",
     "meta_og_type": "website",
-    "meta_og_url": "https://davis-grove-pediatrics.netlify.app",
-    "meta_og_description": "Your neighborhood pediatric clinic"
+    "meta_og_url": "https://www.davisgrovepeds.com/",
+    "meta_og_description": "Pediatric child care located in Cary, NC. Certified members of the American Board of Pediatrics and The American Academy of Pediatrics."
   },
   "footer": {
-    "copyright_text": "Free Gatsby theme by",
-    "copyright_link": "https://www.zerostatic.io"
+    "copyright_text": "Copyright © 2020, Davis Grove Pediatrics, PLLC. All rights reserved.",
+    "copyright_link": "https://www.davisgrovepeds.com/"
   }
 }

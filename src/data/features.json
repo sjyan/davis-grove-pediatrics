@@ -1,12 +1,12 @@
 [
   {
-    "title": "USCIS Civil Surgeon",
-    "description": "We offer medical examinations, tests, and documentation for USCIS applications.",
-    "image": "/images/features/uscis-no-words.svg"
+    "title": "Board Certified",
+    "description": "Board certified in pediatrics with over 20 years of experience.",
+    "image": "/images/features/abp.png"
   },
   {
-    "title": "Fellow of the AAP",
-    "description": "Board certified in pediatrics with over 20 years of experience.",
-    "image": "/images/features/aap.svg"
+    "title": "USCIS Civil Surgeon",
+    "description": "We offer medical examinations, tests, vaccinations, and documentation for USCIS applications.",
+    "image": "/images/features/uscis-no-words.svg"
   }
 ]

@@ -12,6 +12,7 @@ const Team = (props) => {
   } ${
     intro.frontmatter.intro_image_hide_on_mobile && 'intro-image-hide-mobile'
   }`;
+  console.log('team', team);
 
   return (
     <Layout bodyClass="page-teams">
@@ -64,7 +65,8 @@ const Team = (props) => {
                     )}
                   </div>
                   <div className="team-content">
-                    <p>{node.excerpt}</p>
+                    <div dangerouslySetInnerHTML={{ __html: node.html }} />
+                    {/* <p>{node.excerpt}</p> */}
                   </div>
                 </div>
               </div>
@@ -115,6 +117,7 @@ export const query = graphql`
         node {
           id
           excerpt
+          html
           fields {
             slug
           }

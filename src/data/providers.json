@@ -1,32 +1,42 @@
 [
   {
-    "name": "Aetna",
-    "image": "/images/providers/aetna.svg",
-    "url": "https://www.aetna.com/"
-  },
-  {
     "name": "Blue Cross Blue Shield",
     "image": "/images/providers/bcbs-color.svg",
     "url": "https://www.bcbs.com/"
   },
   {
-    "name": "United",
-    "image": "/images/providers/unitedhealthcare-vector-logo.svg",
-    "url": "https://www.uhc.com/"
-  },
-  {
     "name": "Cigna",
-    "image": "/images/providers/cigna-logo-vector.svg",
+    "image": "/images/providers/cigna.svg",
     "url": "https://www.cigna.com/"
   },
   {
-    "name": "Humana",
-    "image": "/images/providers/humana.svg",
-    "url": "https://www.humana.com/"
+    "name": "United",
+    "image": "/images/providers/united.svg",
+    "url": "https://www.uhc.com/"
   },
   {
-    "name": "Tricare",
-    "image": "/images/providers/tricare.svg",
-    "url": "https://www.tricare.mil/"
+    "name": "Aetna",
+    "image": "/images/providers/aetna.svg",
+    "url": "https://www.aetna.com/"
+  },
+  {
+    "name": "Medicaid",
+    "image": "/images/providers/medicaid.svg",
+    "url": "https://www.medicaid.gov/"
+  },
+  {
+    "name": "Ambetter",
+    "image": "/images/providers/ambetter.svg",
+    "url": "https://www.ambetterhealth.com/"
+  },
+  {
+    "name": "Bright",
+    "image": "/images/providers/bright.svg",
+    "url": "https://brighthealthplan.com/"
+  },
+  {
+    "name": "Multiplan",
+    "image": "/images/providers/multiplan.svg",
+    "url": "https://www.multiplan.us/"
   }
 ]

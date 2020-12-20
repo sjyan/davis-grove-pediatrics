@@ -26,12 +26,21 @@ class Header extends React.Component {
           <div className="logo">
             <Link className="masthead" to="/">
               <h3 className="header-title">{config.logo.desktopMasthead}</h3>
+              <h3 className="contact">{config.logo.phone}</h3>
+              <h3 className="contact">
+                {[config.logo.addressLine1, config.logo.addressLine2].join(
+                  ', '
+                )}
+              </h3>
               {/* <img height={config.logo.desktop_height} alt={config.logo.alt} src={config.logo.desktop} /> */}
             </Link>
           </div>
           <div className="logo-mobile">
             <Link className="masthead" to="/">
               <h3 className="header-title">{config.logo.mobileMasthead}</h3>
+              <h3 className="contact">{config.logo.phone}</h3>
+              <h3 className="contact">{config.logo.addressLine1}</h3>
+              <h3 className="contact">{config.logo.addressLine2}</h3>
               {/* <img height={config.logo.desktop_height} alt={config.logo.alt} src={config.logo.mobile} /> */}
             </Link>
           </div>
@@ -56,6 +65,9 @@ export default (props) => (
             desktop_height
             desktopMasthead
             mobileMasthead
+            phone
+            addressLine1
+            addressLine2
           }
         }
       }
