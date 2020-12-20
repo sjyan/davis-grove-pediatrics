@@ -8,11 +8,6 @@ weight: 1
 We have extensive experience, accommodation, and success as a clinic led by a USCIS designated civil surgeon and primary care physician.
 
 ---
-
-# Primary Care
-
-Lorem ipsum dolor.
-
 # I-693 Physical
 
 As a clinic led by a primary care physician and USCIS designated civil surgeon, we have extensive experience in I-693 applications. Our clinic can be your one-stop destination for all the vaccines required to complete your I-693 form for both parents and children. There's no need to make that extra trip to the health department or other medical offices to complete your vaccine requirements. We will accomodate your interview timeline and offer **1 day** visits for clients who are pressed for time.
