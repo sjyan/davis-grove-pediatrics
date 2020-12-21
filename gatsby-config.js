@@ -99,6 +99,7 @@ module.exports = {
               linkImagesToOriginal: true,
             },
           },
+          'gatsby-remark-autolink-headers',
         ],
       },
     },

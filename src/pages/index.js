@@ -16,6 +16,7 @@ const Home = (props) => {
   } ${
     intro.frontmatter.intro_image_hide_on_mobile && 'intro-image-hide-mobile'
   }`;
+  const policiesRoute = '/policies#insurance';
 
   return (
     <Layout bodyClass="page-home">
@@ -105,6 +106,13 @@ const Home = (props) => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+          <div className="container pt-6 pb-6 pt-md-6 pb-md-6">
+            <div className="row justify-content-center">
+              <Link to={policiesRoute}>
+                <h1>And more ➔</h1>
+              </Link>
             </div>
           </div>
         </div>
