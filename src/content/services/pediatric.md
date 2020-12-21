@@ -5,12 +5,12 @@ featured: true
 weight: 1
 ---
 
-You can have confidence that your child will receive the best health care from new born, adolescent and youn adult stage. We provide complete range pediatrics healthcare service in-house, including:
+You can have confidence in us that your child will receive the best health care from new born, adolescent, to young adults. We provide a complete range of pediatric healthcare services in-house, including:
 
-- Newborn Health Care 
-- Adolescent & Young Adult Health Care
-- Annual Health & Wellness Exams
+- Newborn health care 
+- Adolescent & young adult health care
+- Annual health & wellness exams
 - Consultations
-- On-Site Medical Lab Testing
+- On-site medical lab testing
 - Vaccinations
 - Sports and school forms
