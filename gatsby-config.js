@@ -9,9 +9,11 @@ module.exports = {
     description:
       'Pediatric child care located in Cary, NC. Certified members of the American Board of Pediatrics and The American Academy of Pediatrics.',
     url: 'https://www.davisgrovepeds.com/',
+    siteUrl: 'https://www.davisgrovepeds.com/',
     image: '/doctor-favicon.svg',
   },
   plugins: [
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-sass',
     'gatsby-transformer-json',
     'gatsby-transformer-remark',
