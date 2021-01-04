@@ -21,3 +21,7 @@
 [[redirects]]
   from="/Insurance/default.html"
   to="/policies/#insurance"
+
+[[redirects]]
+  from="/patientforms/default.html"
+  to="/policies/#forms"
