@@ -5,3 +5,19 @@
 [build.environment]
   NODE_VERSION = "v10.18.0"
   RUBY_VERSION = "2.6.2"
+
+[[redirects]]
+  from="/about/default.html"
+  to="/about"
+
+[[redirects]]
+  from="/policiesinsurance/default.html"
+  to="/policies/#insurance"
+
+[[redirects]]
+  from="/Patient Services/Forms/default.html"
+  to="/policies/#forms"
+
+[[redirects]]
+  from="/Insurance/default.html"
+  to="/policies/#insurance"
