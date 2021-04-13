@@ -6,6 +6,7 @@ const Call = (props) => {
     query ContactQuery {
       contactJson {
         phone
+        secondaryPhone
         fax
         email
         address {
@@ -24,6 +25,12 @@ const Call = (props) => {
           {data.contactJson.phone && (
             <div className="call-phone">
               <strong>Phone: </strong> {data.contactJson.phone}{' '}
+            </div>
+          )}
+          {data.contactJson.secondaryPhone && (
+            <div className="call-phone">
+              <strong>Secondary Phone: </strong>{' '}
+              {data.contactJson.secondaryPhone}{' '}
             </div>
           )}
           {data.contactJson.fax && (
