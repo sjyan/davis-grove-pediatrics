@@ -27,6 +27,8 @@ module.exports = {
         alias: {
           '@components': path.resolve(__dirname, 'src/components'),
           '@util': path.resolve(__dirname, 'src/util'),
+          '@queries': path.resolve(__dirname, 'src/data/queries'),
+          '@i18n': path.resolve(__dirname, 'i18n') 
         },
       },
     },
@@ -69,6 +71,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/data`,
         name: 'data',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/i18n/translations`,
+        name: 'translations',
       },
     },
     {
