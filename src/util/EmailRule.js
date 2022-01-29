@@ -1,3 +1,3 @@
 export default {
-  regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i
+  regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i,
 };

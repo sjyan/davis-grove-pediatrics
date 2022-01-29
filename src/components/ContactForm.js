@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import EmailRule from '@util/EmailRule';
 import SerializeForm from '@util/SerializeForm';
-import useTranslations from "../components/useTranslations";
+import useTranslations from '../components/useTranslations';
 
 const elementMargin = 30;
 const inputHeight = 45;
@@ -20,7 +20,7 @@ const ContactForm = () => {
     contact_submit,
     contact_clear,
     contact_field_required,
-    contact_field_email
+    contact_field_email,
   } = useTranslations();
 
   const [submitted, setSubmitted] = useState(false);
@@ -46,11 +46,7 @@ const ContactForm = () => {
       setSubmitted(true);
       reset();
     } catch (error) {
-      setError(
-        'submit',
-        'submitError',
-        `${contact_error} ${error.message}`
-      );
+      setError('submit', 'submitError', `${contact_error} ${error.message}`);
     }
   };
 
@@ -58,13 +54,13 @@ const ContactForm = () => {
 
   const showThankYou = (
     <div className="msg-confirm">
-      <p className="paragraph">{ got_your_message }</p>
+      <p className="paragraph">{got_your_message}</p>
       <button
         className="reset"
         type="button"
         onClick={() => setSubmitted(false)}
       >
-        { send_another }
+        {send_another}
       </button>
     </div>
   );
@@ -103,7 +99,7 @@ const ContactForm = () => {
       </div>
       <div className="field half first">
         <label className="label" htmlFor="name" margin={elementMargin}>
-          { contact_name }
+          {contact_name}
         </label>
         <input
           className="input"
@@ -121,7 +117,7 @@ const ContactForm = () => {
       </div>
       <div className="field half">
         <label className="label" htmlFor="email" margin={elementMargin}>
-          { contact_email }
+          {contact_email}
         </label>
         <input
           className="input"
@@ -142,7 +138,7 @@ const ContactForm = () => {
       </div>
       <div className="field">
         <label className="label" htmlFor="message" margin={elementMargin}>
-          { contact_message }
+          {contact_message}
         </label>
         <textarea
           className={errors.message && 'errors'}
@@ -161,13 +157,18 @@ const ContactForm = () => {
         <li className="action-item">
           <input
             type="submit"
-            value={ contact_submit }
+            value={contact_submit}
             className="special submit"
             disabled={isSubmitting}
           />
         </li>
         <li className="action-item">
-          <input className="clear" type="reset" value={ contact_clear } onClick={reset} />
+          <input
+            className="clear"
+            type="reset"
+            value={contact_clear}
+            onClick={reset}
+          />
         </li>
       </ul>
     </form>
@@ -175,7 +176,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <h1>{ get_in_touch }</h1>
+      <h1>{get_in_touch}</h1>
       {errors && errors.submit && showSubmitError(errors.submit.message)}
       <div>{submitted ? showThankYou : showForm}</div>
     </>

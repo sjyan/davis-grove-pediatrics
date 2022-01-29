@@ -1,6 +1,6 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { LocaleContext } from "./GlobalLayout"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import { LocaleContext } from './GlobalLayout';
 
 const query = graphql`
   query useTranslations {
@@ -11,7 +11,7 @@ const query = graphql`
           translations: childTranslationsJson {
             view_services
             and_more
-            contact_error,
+            contact_error
             got_your_message
             send_another
             get_in_touch
@@ -27,25 +27,24 @@ const query = graphql`
       }
     }
   }
-`
+`;
 
 const useTranslations = () => {
   // Grab the locale (passed through context) from the Context Provider
-  const { locale } = React.useContext(LocaleContext)
+  const { locale } = React.useContext(LocaleContext);
   // Query the JSON files in <rootDir>/i18n/translations
-  const { rawData } = useStaticQuery(query)
+  const { rawData } = useStaticQuery(query);
 
   // Simplify the response from GraphQL
-  const simplified = rawData.edges.map(item => ({
-      name: item.node.name,
-      translations: item.node.translations,
-    }))
+  const simplified = rawData.edges.map((item) => ({
+    name: item.node.name,
+    translations: item.node.translations,
+  }));
 
   // Only return translations for the current locale
-  const { translations } = simplified.filter(lang => lang.name === locale)[0]
+  const { translations } = simplified.filter((lang) => lang.name === locale)[0];
 
-  return translations
-}
+  return translations;
+};
 
-export default useTranslations
-
+export default useTranslations;

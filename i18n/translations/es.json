@@ -1,15 +1,15 @@
 {
-	"view_services": "Ver todos servicios",
-	"and_more": "Y mas ➔",
-	"contact_error": "Ups, algo salio mal!",
-	"got_your_message": "Recibimos su mensaje. Gracias",
-	"send_another": "Envia otro",
-	"get_in_touch": "Ponerse en contacto",
-	"contact_name": "Nombre",
-	"contact_email": "Email",
-	"contact_message": "Mensaje",
-	"contact_submit": "Enviar",
-	"contact_clear": "Despejar",
-	"contact_field_required": "Este campo es obligatorio",
-	"contact_field_email": "Introduzca un email valido"
+  "view_services": "Ver todos servicios",
+  "and_more": "Y mas ➔",
+  "contact_error": "Ups, algo salio mal!",
+  "got_your_message": "Recibimos su mensaje. Gracias",
+  "send_another": "Envia otro",
+  "get_in_touch": "Ponerse en contacto",
+  "contact_name": "Nombre",
+  "contact_email": "Email",
+  "contact_message": "Mensaje",
+  "contact_submit": "Enviar",
+  "contact_clear": "Despejar",
+  "contact_field_required": "Este campo es obligatorio",
+  "contact_field_email": "Introduzca un email valido"
 }
