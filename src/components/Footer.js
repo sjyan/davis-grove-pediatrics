@@ -1,36 +1,22 @@
 import React from 'react';
-import { graphql, useStaticQuery, Link } from 'gatsby';
+import LocalizedLink from '@components/LocalizedLink';
+import { useFooterMenu, useSite } from '@queries';
 
-const Footer = (props) => {
-  const data = useStaticQuery(graphql`
-    query FooterQuery {
-      allFooterMenuJson {
-        edges {
-          node {
-            weight
-            url
-            name
-          }
-        }
-      }
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+const Footer = () => {
+  const menuItems = useFooterMenu();
+  const site = useSite();
+
   return (
     <div className="footer">
       <div className="container">
         <div className="row">
           <div className="col-12">
             <div className="footer-inner">
-              <h3 className="footer-title">{data.site.siteMetadata.title}</h3>
+              <h3 className="footer-title">{site.siteMetadata.title}</h3>
               <ul>
-                {data.allFooterMenuJson.edges.map(({ node }) => (
+                {menuItems.map(({ node }) => (
                   <li key={node.name}>
-                    <Link to={node.url}>{node.name}</Link>
+                    <LocalizedLink to={node.url}>{node.name}</LocalizedLink>
                   </li>
                 ))}
               </ul>

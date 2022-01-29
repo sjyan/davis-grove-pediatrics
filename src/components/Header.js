@@ -1,8 +1,10 @@
 import React from 'react';
-import { graphql, Link, StaticQuery } from 'gatsby';
+import LocalizedLink from '../components/LocalizedLink';
 import Menu from './Menu';
 import Hamburger from './Hamburger';
 import MenuMobile from './MenuMobile';
+import { useConfig } from '@queries';
+import Languages from '@components/Languages';
 
 class Header extends React.Component {
   constructor(props) {
@@ -19,33 +21,43 @@ class Header extends React.Component {
   };
 
   render() {
-    const config = this.props.data.configJson;
+    const {
+      logo: {
+        desktopMasthead,
+        mobileMasthead,
+        phone,
+        addressLine1,
+        addressLine2,
+      },
+    } = this.props.data;
+
     return (
       <div className="header">
         <div className="container">
           <div className="logo">
-            <Link className="masthead" to="/">
-              <h3 className="header-title">{config.logo.desktopMasthead}</h3>
-              <h3 className="contact">{config.logo.phone}</h3>
+            <LocalizedLink className="masthead" to="/">
+              <h3 className="header-title">{desktopMasthead}</h3>
+              <h3 className="contact">{phone}</h3>
               <h3 className="contact">
-                {[config.logo.addressLine1, config.logo.addressLine2].join(
-                  ', '
-                )}
+                {[addressLine1, addressLine2].join(', ')}
               </h3>
               {/* <img height={config.logo.desktop_height} alt={config.logo.alt} src={config.logo.desktop} /> */}
-            </Link>
+            </LocalizedLink>
           </div>
           <div className="logo-mobile">
-            <Link className="masthead" to="/">
-              <h3 className="header-title">{config.logo.mobileMasthead}</h3>
-              <h3 className="contact">{config.logo.phone}</h3>
-              <h3 className="contact">{config.logo.addressLine1}</h3>
-              <h3 className="contact">{config.logo.addressLine2}</h3>
+            <LocalizedLink className="masthead" to="/">
+              <h3 className="header-title">{mobileMasthead}</h3>
+              <h3 className="contact">{phone}</h3>
+              <h3 className="contact">{addressLine1}</h3>
+              <h3 className="contact">{addressLine2}</h3>
               {/* <img height={config.logo.desktop_height} alt={config.logo.alt} src={config.logo.mobile} /> */}
-            </Link>
+            </LocalizedLink>
           </div>
           <MenuMobile active={this.state.menuActive} />
-          <Menu />
+          <div className="right-actions">
+            <Languages />
+            <Menu />
+          </div>
           <Hamburger toggleMenu={this.toggleMenu} />
         </div>
       </div>
@@ -53,25 +65,4 @@ class Header extends React.Component {
   }
 }
 
-export default (props) => (
-  <StaticQuery
-    query={graphql`
-      query HeaderQuery {
-        configJson {
-          logo {
-            alt
-            desktop
-            mobile
-            desktop_height
-            desktopMasthead
-            mobileMasthead
-            phone
-            addressLine1
-            addressLine2
-          }
-        }
-      }
-    `}
-    render={(data) => <Header data={data} />}
-  />
-);
+export default () => <Header data={useConfig()} />;

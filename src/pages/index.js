@@ -1,11 +1,13 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
-import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import LocalizedLink from '../components/LocalizedLink';
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
 import Call from '../components/Call';
+import useTranslations from '../components/useTranslations';
 
 const Home = (props) => {
+  const { view_services, and_more } = useTranslations();
   const { intro } = props.data;
   const site = props.data.site.siteMetadata;
   const services = props.data.services.edges;
@@ -53,9 +55,9 @@ const Home = (props) => {
                   <div className="service service-summary">
                     <div className="service-content">
                       <h2 className="service-title">
-                        <Link to={node.fields.slug}>
+                        <LocalizedLink to={node.fields.slug}>
                           {node.frontmatter.title}
-                        </Link>
+                        </LocalizedLink>
                       </h2>
                       <p>{node.excerpt}</p>
                     </div>
@@ -65,16 +67,22 @@ const Home = (props) => {
             </div>
             <div className="row justify-content-center services-button">
               <div className="col-auto">
-                <Link className="button button-primary" to="/services/">
-                  View All Services
-                </Link>
+                <LocalizedLink
+                  className="button button-primary"
+                  to="/services/"
+                >
+                  {view_services}
+                </LocalizedLink>
               </div>
             </div>
             <div className="row justify-content-start services-button-mobile">
               <div className="col-auto">
-                <Link className="button button-primary" to="/services/">
-                  View All Services
-                </Link>
+                <LocalizedLink
+                  className="button button-primary"
+                  to="/services/"
+                >
+                  {view_services}
+                </LocalizedLink>
               </div>
             </div>
           </div>
@@ -110,9 +118,9 @@ const Home = (props) => {
           </div>
           <div className="container pt-6 pb-6 pt-md-6 pb-md-6">
             <div className="row justify-content-center">
-              <Link to={policiesRoute}>
-                <h1>And more ➔</h1>
-              </Link>
+              <LocalizedLink to={policiesRoute}>
+                <h1>{and_more}</h1>
+              </LocalizedLink>
             </div>
           </div>
         </div>
@@ -144,9 +152,12 @@ const Home = (props) => {
 };
 
 export const query = graphql`
-  query {
+  query($locale: String!) {
     services: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/services/.*/" } }
+      filter: {
+        fileAbsolutePath: { regex: "/services/.*/" }
+        fields: { locale: { eq: $locale } }
+      }
       sort: { fields: [frontmatter___weight], order: ASC }
       limit: 6
     ) {
@@ -164,7 +175,10 @@ export const query = graphql`
         }
       }
     }
-    intro: markdownRemark(fileAbsolutePath: { regex: "/content/index.md/" }) {
+    intro: markdownRemark(
+      frontmatter: { path: { eq: "/" } }
+      fields: { locale: { eq: $locale } }
+    ) {
       html
       frontmatter {
         image
@@ -184,7 +198,7 @@ export const query = graphql`
         }
       }
     }
-    features: allFeaturesJson {
+    features: allFeaturesJson(filter: { locale: { eq: $locale } }) {
       edges {
         node {
           id

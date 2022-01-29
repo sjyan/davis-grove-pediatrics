@@ -1,31 +1,21 @@
 import React from 'react';
-import { graphql, useStaticQuery, Link } from 'gatsby';
+import LocalizedLink from '@components/LocalizedLink';
+import { useMainMenu } from '@queries';
 
 const MobileMenu = (props) => {
-  const data = useStaticQuery(graphql`
-    query MainMobileMenuQuery {
-      allMainMenuJson {
-        edges {
-          node {
-            name
-            url
-            weight
-          }
-        }
-      }
-    }
-  `);
+  const menuItems = useMainMenu();
+
   return (
     <div
       id="main-menu-mobile"
       className={`main-menu-mobile ${props.active ? 'open' : ''}`}
     >
       <ul>
-        {data.allMainMenuJson.edges.map(({ node }) => (
+        {menuItems.map(({ node }) => (
           <li key={node.name}>
-            <Link to={node.url} activeClassName="active">
+            <LocalizedLink to={node.url} activeClassName="active">
               {node.name}
-            </Link>
+            </LocalizedLink>
           </li>
         ))}
       </ul>

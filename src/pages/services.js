@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
+import LocalizedLink from '../components/LocalizedLink';
 
 const Services = (props) => {
   const services = props.data.services.edges;
@@ -45,9 +46,9 @@ const Services = (props) => {
               <div className="card service service-teaser">
                 <div className="card-content">
                   <h2>
-                    <Link to={edge.node.fields.slug}>
+                    <LocalizedLink to={edge.node.fields.slug}>
                       {edge.node.frontmatter.title}
-                    </Link>
+                    </LocalizedLink>
                   </h2>
                   <p>{edge.node.excerpt}</p>
                 </div>
@@ -61,9 +62,12 @@ const Services = (props) => {
 };
 
 export const query = graphql`
-  query ServicesQuery {
+  query ServicesQuery($locale: String!) {
     services: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/services/.*/" } }
+      filter: {
+        fileAbsolutePath: { regex: "/services/.*/" }
+        fields: { locale: { eq: $locale } }
+      }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
@@ -79,7 +83,10 @@ export const query = graphql`
         }
       }
     }
-    intro: markdownRemark(fileAbsolutePath: { regex: "/(services.md)/" }) {
+    intro: markdownRemark(
+      frontmatter: { path: { eq: "/services" } }
+      fields: { locale: { eq: $locale } }
+    ) {
       html
       frontmatter {
         title
