@@ -2,11 +2,25 @@
   {
     "title": "Board Certified",
     "description": "Board certified in pediatrics with over 20 years of experience.",
-    "image": "/images/features/abp.png"
+    "image": "/images/features/abp.png",
+    "locale": "en"
+  },
+  {
+    "title": "Boarda certificada",
+    "description": "Hola",
+    "image": "/images/features/abp.png",
+    "locale": "es"
   },
   {
     "title": "USCIS Civil Surgeon",
     "description": "We offer medical examinations, tests, vaccinations, and documentation for USCIS applications.",
-    "image": "/images/features/uscis-no-words.svg"
+    "image": "/images/features/uscis-no-words.svg",
+    "locale": "en"
+  },
+  {
+    "title": "USCIS Cirujana Civil",
+    "description": "Hola",
+    "image": "/images/features/uscis-no-words.svg",
+    "locale": "es"
   }
 ]
