@@ -16,11 +16,11 @@ module.exports = {
   es: {
     path: `es`,
     locale: `es-MX`,
-    name: `Espanol`,
+    name: `Español`,
     dateFormat: `DD.MM.YYYY`,
     siteLanguage: `es`,
     ogLanguage: `es_MX`,
     defaultTitle: `i18n mit Gatsby nutzen`,
     defaultDescription: `Gatsby Beispielseite, die MDX und i18n (frei von dependencies) nutzt`,
   },
-}
+};
