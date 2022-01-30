@@ -11,5 +11,6 @@
   "contact_submit": "Enviar",
   "contact_clear": "Despejar",
   "contact_field_required": "Este campo es obligatorio",
-  "contact_field_email": "Introduzca un email valido"
+  "contact_field_email": "Introduzca un email valido",
+  "close_menu": "Cerrar"
 }

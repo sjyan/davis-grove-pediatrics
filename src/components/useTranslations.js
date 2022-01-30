@@ -22,6 +22,7 @@ const query = graphql`
             contact_clear
             contact_field_required
             contact_field_email
+            close_menu
           }
         }
       }
@@ -31,7 +32,7 @@ const query = graphql`
 
 const useTranslations = () => {
   // Grab the locale (passed through context) from the Context Provider
-  const { locale } = React.useContext(LocaleContext);
+  const { locale: currentLocaleCode } = React.useContext(LocaleContext);
   // Query the JSON files in <rootDir>/i18n/translations
   const { rawData } = useStaticQuery(query);
 
@@ -42,7 +43,9 @@ const useTranslations = () => {
   }));
 
   // Only return translations for the current locale
-  const { translations } = simplified.filter((lang) => lang.name === locale)[0];
+  const { translations } = simplified.find(
+    (lang) => lang.name === currentLocaleCode
+  );
 
   return translations;
 };
