@@ -2,11 +2,16 @@ import React from 'react';
 import LocalizedLink from '@components/LocalizedLink';
 import { useMainMenu } from '@queries';
 
-const Menu = () => {
+const Menu = ({ mobile, open }) => {
   const menuItems = useMainMenu();
 
   return (
-    <div id="main-menu" className="main-menu">
+    <div
+      id="main-menu"
+      className={`${mobile ? 'main-menu-mobile' : 'main-menu'} ${
+        open && 'open'
+      }`}
+    >
       <ul>
         {menuItems.map(({ node }) => (
           <li key={node.name}>

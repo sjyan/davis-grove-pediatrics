@@ -18,10 +18,10 @@ const getFinalLocalizedPath = (
 // Use the globally available context to choose the right path
 const LocalizedLink = ({ locale, to, ...props }) => {
   // TODO: Explicitly defined locale prop => locale from context => infer from client
-  const { locale: localeFromContext } = React.useContext(LocaleContext);
+  const { locale: currentLocaleCode } = React.useContext(LocaleContext);
 
   // Default to locale from context if one is not specified as prop
-  locale ||= localeFromContext;
+  locale ||= currentLocaleCode;
 
   return <Link {...props} to={getFinalLocalizedPath(to, locales[locale])} />;
 };

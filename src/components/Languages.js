@@ -5,7 +5,7 @@ import { LocaleContext } from '@components/GlobalLayout';
 
 const Languages = () => {
   const locales = useLocales();
-  const { locale: currentLocale, path } = React.useContext(LocaleContext);
+  const { locale: currentLocaleCode, path } = React.useContext(LocaleContext);
 
   return (
     <div id="languages-menu" className="languages-menu">
@@ -14,7 +14,9 @@ const Languages = () => {
           return (
             <li key={locale.path}>
               <LocalizedLink locale={locale.path} to={`${path}`}>
-                <span className={locale.path === currentLocale ? `active` : ``}>
+                <span
+                  className={locale.path === currentLocaleCode ? `active` : ``}
+                >
                   {locale.name}
                 </span>
               </LocalizedLink>
