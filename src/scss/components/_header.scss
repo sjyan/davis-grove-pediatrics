@@ -8,7 +8,8 @@
   border-bottom: 1px solid $white-offset;
   padding: 10px 0px;
   .contact {
-    .phone, .address {
+    .phone,
+    .address {
       color: $steel;
       font-size: 1.3rem;
       font-family: $font-family-heading;
@@ -20,7 +21,7 @@
     }
 
     .address {
-      font-size: 1.0rem;
+      font-size: 1rem;
     }
   }
 
@@ -41,7 +42,7 @@
 
     .contact {
       color: $steel;
-      font-size: 1.0rem;
+      font-size: 1rem;
       font-family: $font-family-heading;
       font-weight: bold;
       margin-bottom: 0;
@@ -50,7 +51,7 @@
         margin: 0;
       }
     }
- }
+  }
   .container {
     display: flex;
     justify-content: space-between;
@@ -62,10 +63,18 @@
     width: 100%;
   }
 
-  .right-actions {
+  .right-actions,
+  .mobile-actions {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: space-around;
+  }
+
+  .mobile-actions {
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
   }
 }
 
