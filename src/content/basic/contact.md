@@ -1,8 +1,8 @@
 ---
-path: "/contact"
-title: "Contact"
+path: '/contact'
+title: 'Contact'
 date: 2018-02-22T17:01:34+07:00
-template: "contact"
+template: 'contact'
 ---
 
 If this is your first appointment with us, please come at least 15 minutes ahead of time in order to fulfill some initial paperwork when you check in.
