@@ -1,0 +1,19 @@
+.languages-toggle {
+  cursor: pointer;
+  > span {
+    font-family: $font-family-monospace;
+    @include font-size($font-size-sm);
+    color: $black;
+    text-decoration: underline;
+  }
+
+  &.is-active {
+    span {
+      color: $white;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}

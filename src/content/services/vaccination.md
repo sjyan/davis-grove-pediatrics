@@ -1,5 +1,5 @@
 ---
-title: "Vaccinations"
+title: 'Vaccinations'
 date: 2020-12-19
 featured: true
 weight: 3

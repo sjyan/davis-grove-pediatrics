@@ -2,26 +2,61 @@
   {
     "name": "Services",
     "url": "/services/",
-    "weight": 2
+    "weight": 2,
+    "locale": "en"
+  },
+  {
+    "name": "Servicios",
+    "url": "/services/",
+    "weight": 2,
+    "locale": "es"
   },
   {
     "name": "Providers",
     "url": "/team/",
-    "weight": 3
+    "weight": 3,
+    "locale": "en"
+  },
+  {
+    "name": "Proveedores",
+    "url": "/team/",
+    "weight": 3,
+    "locale": "es"
   },
   {
     "name": "Policies",
     "url": "/policies/",
-    "weight": 4
+    "weight": 4,
+    "locale": "en"
+  },
+  {
+    "name": "Policias",
+    "url": "/policies/",
+    "weight": 4,
+    "locale": "es"
   },
   {
     "name": "About",
     "url": "/about/",
-    "weight": 5
+    "weight": 5,
+    "locale": "en"
+  },
+  {
+    "name": "Acerca de",
+    "url": "/about/",
+    "weight": 5,
+    "locale": "es"
   },
   {
     "name": "Contact",
     "url": "/contact/",
-    "weight": 6
+    "weight": 6,
+    "locale": "en"
+  },
+  {
+    "name": "Contacto",
+    "url": "/contact/",
+    "weight": 6,
+    "locale": "es"
   }
 ]

@@ -1,11 +1,11 @@
 ---
 path: '/'
-title: 'Home'
+title: 'Inicio'
 intro_image: '/images/illustrations/kids.svg'
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
 ---
 
-# Your Neighborhood Pediatric Clinic
+# Su clínica pediátrica vecina
 
-Where little things matter.
+donde las pequeñas cosas importan

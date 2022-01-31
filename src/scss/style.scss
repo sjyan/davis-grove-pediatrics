@@ -4,7 +4,7 @@ $secondary: #ffe55f;
 $black: #2f2f41;
 $white: #ffffff;
 $white-offset: #f6f7ff;
-$steel: #5C5A5A;
+$steel: #5c5a5a;
 $complement: #fffef6;
 $warning: #d73a49;
 
@@ -33,7 +33,6 @@ $field-margin: 30px;
 @import 'bootstrap/bootstrap-grid';
 // @import 'bootstrap/bootstrap'; // Uncomment this line to import the entire Bootstrap library
 
-
 // Libraries
 @import 'libraries/hamburgers/hamburgers';
 
@@ -46,6 +45,7 @@ $field-margin: 30px;
 @import 'components/logo';
 @import 'components/main-menu';
 @import 'components/main-menu-mobile';
+@import 'components/languages-menu';
 @import 'components/hamburger';
 @import 'components/buttons';
 @import 'components/call';
@@ -59,6 +59,7 @@ $field-margin: 30px;
 @import 'components/social';
 @import 'components/service';
 @import 'components/contact-form';
+@import 'components/languages-toggle';
 
 // Pages
 @import 'pages/home';
@@ -77,7 +78,7 @@ body {
 
 // Spacing for gatsby anchor autolinks
 .anchor {
-  padding-right: .875rem !important; 
+  padding-right: 0.875rem !important;
 }
 
 // Secondary body class

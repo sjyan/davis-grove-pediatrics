@@ -1,0 +1,21 @@
+{
+  "view_services": "View all services",
+  "and_more": "And more ➔",
+  "contact_error": "Oops, there seems to be an issue!",
+  "got_your_message": "We got your message. Thanks!",
+  "send_another": "Send another",
+  "get_in_touch": "Get in touch",
+  "contact_name": "Name",
+  "contact_email": "Email",
+  "contact_message": "Message",
+  "contact_submit": "Submit",
+  "contact_clear": "Clear",
+  "contact_field_required": "This field is required.",
+  "contact_field_email": "Enter a valid email address",
+  "close_menu": "Close",
+  "contact": "Contact",
+  "phone": "Phone",
+  "secondary_phone": "Secondary Phone",
+  "fax": "Fax",
+  "address": "Address"
+}

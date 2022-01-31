@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
-import Call from '../components/Call';
 
 const Team = (props) => {
   const team = props.data.team.edges;
@@ -12,7 +11,6 @@ const Team = (props) => {
   } ${
     intro.frontmatter.intro_image_hide_on_mobile && 'intro-image-hide-mobile'
   }`;
-  console.log('team', team);
 
   return (
     <Layout bodyClass="page-teams">
@@ -108,9 +106,12 @@ const Team = (props) => {
 };
 
 export const query = graphql`
-  query TeamQuery {
+  query TeamQuery($locale: String!) {
     team: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/team/.*/" } }
+      filter: {
+        fileAbsolutePath: { regex: "/team/.*/" }
+        fields: { locale: { eq: $locale } }
+      }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
@@ -131,7 +132,10 @@ export const query = graphql`
         }
       }
     }
-    intro: markdownRemark(fileAbsolutePath: { regex: "/(team.md)/" }) {
+    intro: markdownRemark(
+      frontmatter: { path: { eq: "/team" } }
+      fields: { locale: { eq: $locale } }
+    ) {
       html
       frontmatter {
         image

@@ -1,6 +1,7 @@
 ---
 title: 'Services'
-intro_image: "/images/illustrations/kids-3.svg"
+path: '/services'
+intro_image: '/images/illustrations/kids-3.svg'
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
 ---
