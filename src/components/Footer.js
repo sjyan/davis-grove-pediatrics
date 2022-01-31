@@ -1,6 +1,7 @@
 import React from 'react';
 import LocalizedLink from '@components/LocalizedLink';
-import { useFooterMenu, useSite } from '@queries';
+import useFooterMenu from '@queries/useFooterMenu';
+import useSite from '@queries/useSite';
 
 const Footer = () => {
   const menuItems = useFooterMenu();

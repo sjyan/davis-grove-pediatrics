@@ -1,6 +1,6 @@
 import React from 'react';
 import LocalizedLink from '@components/LocalizedLink';
-import { useLocales } from '@queries';
+import useLocales from '@queries/useLocales';
 import { LocaleContext } from '@components/GlobalLayout';
 
 const LanguagesMobile = ({ mobile, open }) => {

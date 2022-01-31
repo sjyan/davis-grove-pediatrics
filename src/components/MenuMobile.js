@@ -1,6 +1,7 @@
 import React from 'react';
 import LocalizedLink from '@components/LocalizedLink';
 import { useMainMenu } from '@queries';
+import useMainMenu from '@queries/useMainMenu';
 
 const MobileMenu = (props) => {
   const menuItems = useMainMenu();

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import LocalizedLink from '../components/LocalizedLink';
 import Menu from './Menu';
 import Hamburger from './Hamburger';
-import { useConfig } from '@queries';
+import useConfig from '@queries/useConfig';
 import Languages from '@components/Languages';
 import LanguagesToggle from '@components/LanguagesToggle';
 import LanguagesMobile from '@components/LanguagesMobile';

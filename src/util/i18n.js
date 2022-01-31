@@ -1,4 +1,4 @@
-import { useLocales } from '@queries';
+import useLocales from '@queries/useLocales';
 
 const getLocaleNameFromCode = (localeCode) => {
   const locales = useLocales();
