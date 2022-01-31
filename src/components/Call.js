@@ -1,7 +1,9 @@
 import React from 'react';
+import useTranslations from '@components/useTranslations';
 import { graphql, useStaticQuery } from 'gatsby';
 
 const Call = (props) => {
+  const { contact } = useTranslations();
   const data = useStaticQuery(graphql`
     query ContactQuery {
       contactJson {
@@ -71,7 +73,7 @@ const Call = (props) => {
       props.showButton && (
         <div className="call-box-bottom">
           <a href={data.contactJson.contact_button_link} className="button">
-            Contact
+            {contact}
           </a>
         </div>
       )

@@ -23,6 +23,7 @@ const query = graphql`
             contact_field_required
             contact_field_email
             close_menu
+            contact
           }
         }
       }

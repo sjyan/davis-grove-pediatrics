@@ -1,6 +1,6 @@
 ---
 path: '/contact'
-title: 'Contacto'
+title: 'Contacta con nosotros'
 date: 2018-02-22T17:01:34+07:00
 template: 'contact'
 ---

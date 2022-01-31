@@ -12,5 +12,6 @@
   "contact_clear": "Clear",
   "contact_field_required": "This field is required.",
   "contact_field_email": "Enter a valid email address",
-  "close_menu": "Close"
+  "close_menu": "Close",
+  "contact": "Contact"
 }
