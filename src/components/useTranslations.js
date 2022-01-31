@@ -24,6 +24,10 @@ const query = graphql`
             contact_field_email
             close_menu
             contact
+            phone
+            secondary_phone
+            fax
+            address
           }
         }
       }
