@@ -6,6 +6,6 @@ intro_image_absolute: true
 intro_image_hide_on_mobile: false
 ---
 
-# Su clínica pediátrica comunitaria
+# Su clínica pediátrica vecina
 
 donde las pequeñas cosas importan
