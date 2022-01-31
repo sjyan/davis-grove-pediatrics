@@ -1,5 +1,6 @@
 import React from 'react';
 import useTranslations from '@components/useTranslations';
+import LocalizedLink from '@components/LocalizedLink';
 import { graphql, useStaticQuery } from 'gatsby';
 
 const Call = (props) => {
@@ -72,9 +73,12 @@ const Call = (props) => {
     return (
       props.showButton && (
         <div className="call-box-bottom">
-          <a href={data.contactJson.contact_button_link} className="button">
+          <LocalizedLink
+            to={data.contactJson.contact_button_link}
+            className="button"
+          >
             {contact}
-          </a>
+          </LocalizedLink>
         </div>
       )
     );
