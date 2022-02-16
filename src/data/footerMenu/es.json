@@ -1,0 +1,17 @@
+{
+  "locale": "es",
+  "value": [
+    {
+      "key": "home",
+      "name": "Inicio",
+      "url": "/",
+      "weight": 1
+    },
+    {
+      "key": "contact",
+      "name": "Contacto",
+      "url": "/contact/",
+      "weight": 2
+    }
+  ]
+}

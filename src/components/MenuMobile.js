@@ -12,8 +12,8 @@ const MobileMenu = (props) => {
       className={`main-menu-mobile ${props.active ? 'open' : ''}`}
     >
       <ul>
-        {menuItems.map(({ node }) => (
-          <li key={node.name}>
+        {menuItems.map((node) => (
+          <li key={node.key}>
             <LocalizedLink to={node.url} activeClassName="active">
               {node.name}
             </LocalizedLink>

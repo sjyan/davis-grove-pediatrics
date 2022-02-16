@@ -6,9 +6,12 @@ const query = graphql`
     allFooterMenuJson {
       edges {
         node {
-          weight
-          url
-          name
+          value {
+            key
+            name
+            url
+            weight
+          }
           locale
         }
       }
@@ -16,4 +19,5 @@ const query = graphql`
   }
 `;
 
-export default () => Localize(useStaticQuery(query).allFooterMenuJson);
+export default () =>
+  Localize(useStaticQuery(query).allFooterMenuJson)[0]?.node?.value;

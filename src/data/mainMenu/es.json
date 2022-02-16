@@ -1,0 +1,35 @@
+{
+  "locale": "es",
+  "value": [
+    {
+      "key": "services",
+      "name": "Servicios",
+      "url": "/services/",
+      "weight": 2
+    },
+    {
+      "key": "providers",
+      "name": "Proveedores",
+      "url": "/team/",
+      "weight": 3
+    },
+    {
+      "key": "policies",
+      "name": "Policias",
+      "url": "/policies/",
+      "weight": 4
+    },
+    {
+      "key": "about",
+      "name": "Acerca de",
+      "url": "/about/",
+      "weight": 5
+    },
+    {
+      "key": "contact",
+      "name": "Contacto",
+      "url": "/contact/",
+      "weight": 6
+    }
+  ]
+}

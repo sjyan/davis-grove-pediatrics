@@ -6,9 +6,12 @@ const query = graphql`
     allMainMenuJson {
       edges {
         node {
-          name
-          url
-          weight
+          value {
+            key
+            name
+            url
+            weight
+          }
           locale
         }
       }
@@ -16,4 +19,5 @@ const query = graphql`
   }
 `;
 
-export default () => Localize(useStaticQuery(query).allMainMenuJson);
+export default () =>
+  Localize(useStaticQuery(query).allMainMenuJson)[0]?.node?.value;
