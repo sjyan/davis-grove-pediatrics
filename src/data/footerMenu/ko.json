@@ -3,13 +3,13 @@
   "value": [
     {
       "key": "home",
-      "name": "Home",
+      "name": "홈",
       "url": "/",
       "weight": 1
     },
     {
       "key": "contact",
-      "name": "Contact",
+      "name": "문의",
       "url": "/contact/",
       "weight": 2
     }
