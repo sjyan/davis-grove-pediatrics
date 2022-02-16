@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import favicon from '../../static/doctor-favicon.svg';
+import { LocaleContext } from '@components/GlobalLayout';
 
 const SEO = (props) => (
   <StaticQuery
@@ -9,10 +10,11 @@ const SEO = (props) => (
     render={(data) => {
       const title = props.title || data.site.siteMetadata.title;
       const { description, image, url } = data.site.siteMetadata;
+      const { locale: currentLocaleCode } = React.useContext(LocaleContext);
       return (
         <Helmet
           htmlAttributes={{
-            lang: 'en',
+            lang: currentLocaleCode,
           }}
           title={title}
           titleTemplate={
