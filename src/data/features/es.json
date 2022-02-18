@@ -1,0 +1,17 @@
+{
+  "locale": "es",
+  "value": [
+    {
+      "key": "board-certified",
+      "title": "Certificada por la Junta",
+      "description": "Certificado por la junta en pediatría con más de 20 años de experiencia.",
+      "image": "/images/features/abp.png"
+    },
+    {
+      "key": "uscis-civil-surgeon",
+      "title": "Cirujana Civil de USCIS",
+      "description": "Ofrecemos exámenes médicos, pruebas, vacunas y documentación para las solicitudes de USCIS.",
+      "image": "/images/features/uscis-no-words.svg"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "locale": "ko",
+  "value": [
+    {
+      "key": "board-certified",
+      "title": "보드 인증",
+      "description": "20년 이상의 경험으로 소아과에서 인증된 보드입니다.",
+      "image": "/images/features/abp.png"
+    },
+    {
+      "key": "uscis-civil-surgeon",
+      "title": "USCIS 지정 민간 외과 의사",
+      "description": "USCIS 신청을 위한 건강 검진, 검사, 예방 접종 및 문서를 제공합니다.",
+      "image": "/images/features/uscis-no-words.svg"
+    }
+  ]
+}

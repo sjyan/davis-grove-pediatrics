@@ -15,8 +15,8 @@ const Footer = () => {
             <div className="footer-inner">
               <h3 className="footer-title">{site.siteMetadata.title}</h3>
               <ul>
-                {menuItems.map(({ node }) => (
-                  <li key={node.name}>
+                {menuItems.map((node) => (
+                  <li key={node.key}>
                     <LocalizedLink to={node.url}>{node.name}</LocalizedLink>
                   </li>
                 ))}

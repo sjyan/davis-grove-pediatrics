@@ -11,7 +11,7 @@ const Home = (props) => {
   const { intro } = props.data;
   const site = props.data.site.siteMetadata;
   const services = props.data.services.edges;
-  const features = props.data.features.edges;
+  const features = props.data.features.edges[0]?.node?.value;
   const providers = props.data.providers.edges;
   const introImageClasses = `intro-image ${
     intro.frontmatter.intro_image_absolute && 'intro-image-absolute'
@@ -130,8 +130,8 @@ const Home = (props) => {
         <div className="strip">
           <div className="container pt-6 pb-6 pt-md-6 pb-md-6">
             <div className="row justify-content-center">
-              {features.map(({ node }) => (
-                <div key={node.id} className="col-12 col-md-6 col-lg-4 mb-2">
+              {features.map((node) => (
+                <div key={node.key} className="col-12 col-md-6 col-lg-4 mb-2">
                   <div className="feature">
                     {node.image && (
                       <div className="feature-image">
@@ -201,10 +201,13 @@ export const query = graphql`
     features: allFeaturesJson(filter: { locale: { eq: $locale } }) {
       edges {
         node {
-          id
-          title
-          description
-          image
+          value {
+            key
+            title
+            description
+            image
+          }
+          locale
         }
       }
     }

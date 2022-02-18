@@ -1,0 +1,21 @@
+{
+  "view_services": "모든 서비스 보기",
+  "and_more": "더 보기 ➔",
+  "contact_error": "문제가 있는 것 같습니다!",
+  "got_your_message": "메시지를 받았습니다. 감사합니다!",
+  "send_another": "또 보내기",
+  "get_in_touch": "연락하기",
+  "contact_name": "이름",
+  "contact_email": "이메일",
+  "contact_message": "메시지",
+  "contact_submit": "완료",
+  "contact_clear": "지우기",
+  "contact_field_required": "필수 사항.",
+  "contact_field_email": "유효한 이메일 주소를 입력하세요.",
+  "close_menu": "닫기",
+  "contact": "문의",
+  "phone": "전화",
+  "secondary_phone": "보조 전화",
+  "fax": "팩스",
+  "address": "주소"
+}

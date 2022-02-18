@@ -1,0 +1,35 @@
+{
+  "locale": "en",
+  "value": [
+    {
+      "key": "services",
+      "name": "Services",
+      "url": "/services/",
+      "weight": 2
+    },
+    {
+      "key": "providers",
+      "name": "Providers",
+      "url": "/team/",
+      "weight": 3
+    },
+    {
+      "key": "policies",
+      "name": "Policies",
+      "url": "/policies/",
+      "weight": 4
+    },
+    {
+      "key": "about",
+      "name": "About",
+      "url": "/about/",
+      "weight": 5
+    },
+    {
+      "key": "contact",
+      "name": "Contact",
+      "url": "/contact/",
+      "weight": 6
+    }
+  ]
+}

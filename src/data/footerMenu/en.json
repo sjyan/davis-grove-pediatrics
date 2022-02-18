@@ -1,0 +1,17 @@
+{
+  "locale": "en",
+  "value": [
+    {
+      "key": "home",
+      "name": "Home",
+      "url": "/",
+      "weight": 1
+    },
+    {
+      "key": "contact",
+      "name": "Contact",
+      "url": "/contact/",
+      "weight": 2
+    }
+  ]
+}
