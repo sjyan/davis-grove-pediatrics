@@ -6,6 +6,6 @@ intro_image_absolute: true
 intro_image_hide_on_mobile: false
 ---
 
-# Comprehensive care from infancy to young adulthood
+# 영유아기부터 성인기까지 종합 돌봄
 
-Our services are designed to ensure the healthy development of every child.
+우리의 서비스는 모든 어린이의 건강한 발달을 보장하도록 설계되었습니다.
