@@ -71,8 +71,6 @@ const ContactForm = () => {
       onSubmit={handleSubmit(onSubmit)}
       name={formName}
       method="post"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
       margin={elementMargin}
     >
       <div hidden>

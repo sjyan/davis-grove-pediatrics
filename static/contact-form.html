@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+   <title>Contact Form</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<form
+   class="form"
+   name="Contact"
+   method="post"
+   data-netlify="true"
+   data-netlify-honeypot="bot-field"
+   >
+   <div hidden>
+      <label class="label" for="bot-field">
+      Honeypot
+      </label>
+      <input
+         class="input"
+         id="bot-field"
+         name="bot-field"
+         />
+      <label class="label" for="form-name">
+      Form name
+      </label>
+      <input
+         class="input"
+         id="form-name"
+         name="form-name"
+         value="Contact"
+         disabled
+         />
+   </div>
+   <div class="field half first">
+      <label class="label" for="name">
+      Name
+      </label>
+      <input
+         class="input"
+         type="text"
+         name="name"
+         id="name"
+         />
+   </div>
+   <div class="field half">
+      <label class="label" for="email">
+      Email
+      </label>
+      <input
+         class="input"
+         type="text"
+         name="email"
+         id="email"
+         />
+   </div>
+   <div class="field">
+      <label class="label" for="message">
+      message
+      </label>
+      <textarea
+         name="message"
+         id="message"
+         rows="6"
+         ></textarea>
+   </div>
+   <ul class="actions">
+      <li class="action-item">
+         <input type="submit" class="special submit"/>
+      </li>
+      <li class="action-item">
+         <input class="clear" type="reset" />
+      </li>
+   </ul>
+</form>
