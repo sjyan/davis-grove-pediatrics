@@ -7,8 +7,6 @@ template: 'contact'
 
 If this is your first appointment with us, please come at least 15 minutes ahead of time in order to fulfill some initial paperwork when you check in.
 
-For school forms, please go to the approriate sources to obtain updated and correct forms for your intended purpose and bring them to our office.
-
 Please call for appointments.
 
 We appreciate your help and look forward to seeing you.
@@ -25,4 +23,4 @@ We appreciate your help and look forward to seeing you.
 
 > Please note that we are closed on major holidays.
 
-> Due to COVID-19, please note that we are not accommodating any walk-ins.
+> Please note that we are not accommodating any walk-ins.
