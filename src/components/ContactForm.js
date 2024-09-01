@@ -177,6 +177,19 @@ const ContactForm = () => {
       <h1>{get_in_touch}</h1>
       {errors && errors.submit && showSubmitError(errors.submit.message)}
       <div>{submitted ? showThankYou : showForm}</div>
+      <br />
+      <p>
+        Dial 911 in the case of a medical emergency. If you need to speak with
+        us or our provider, please call 919-363-3437.
+      </p>
+      <p>
+        Our email messages are <strong>NOT</strong> monitored on weekends,
+        holidays, or during non-business hours.
+      </p>
+      <p>
+        <strong>DO NOT</strong> send messages via email or the website if you
+        need immediate assistance. Thank you.
+      </p>
     </>
   );
 };
